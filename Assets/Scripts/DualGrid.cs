@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
+[ExecuteAlways]
 public class DualGrid : MonoBehaviour
 {
     public Tilemap placeholderTilemap;
@@ -12,7 +16,7 @@ public class DualGrid : MonoBehaviour
     public List<Tile> placeholderTiles;
     public List<Tile> visualTiles;
 
-    private readonly Tile[] tilesByAdjacency = new Tile[16];
+    public Tile[] tilesByAdjacency = new Tile[16];
 
     /// <summary>
     /// Here, 1 is the primary tile (grass) and 0 is the secondary tile (dirt), this is based on the order of the tiles in the palette.
@@ -39,8 +43,22 @@ public class DualGrid : MonoBehaviour
 
     private void Awake()
     {
-        CreateDict();
         UpdateAllTiles();
+    }
+
+    private void OnEnable()
+    {
+        Tilemap.tilemapPositionsChanged += OnTilemapPositionsChanged;
+    }
+
+    private void OnDisable()
+    {
+        Tilemap.tilemapPositionsChanged -= OnTilemapPositionsChanged;
+    }
+
+    private void OnValidate()
+    {
+        CreateDict();
     }
 
     private void CreateDict()
@@ -96,11 +114,25 @@ public class DualGrid : MonoBehaviour
     /// <summary>
     /// Updates a visual tile at the given position.
     /// </summary>
-    private void UpdateTile(Vector3Int position)
+    private void UpdateVisualTile(Vector3Int position)
     {
         int adjacency = GetAdjacency(position);
 
         visualTilemap.SetTile(position, adjacency == -1 ? null : tilesByAdjacency[adjacency]);
+    }
+
+    /// <summary>
+    /// Updates the visual tile neighbors of a placeholder tile.
+    /// </summary>
+    private void UpdatePlaceholderTile(Vector3Int position)
+    {
+        for (int x = position.x; x < position.x + 2; x++)
+        {
+            for (int y = position.y; y < position.y + 2; y++)
+            {
+                UpdateVisualTile(new(x, y));
+            }
+        }
     }
 
     /// <summary>
@@ -114,8 +146,20 @@ public class DualGrid : MonoBehaviour
         {
             for (int y = bounds.yMin; y <= bounds.yMax; y++)
             {
-                UpdateTile(new Vector3Int(x, y));
+                UpdateVisualTile(new Vector3Int(x, y));
             }
+        }
+    }
+
+    private void OnTilemapPositionsChanged(Tilemap tilemap, NativeArray<Vector3Int> positions)
+    {
+        if (tilemap != placeholderTilemap) return;
+
+        Undo.RecordObject(visualTilemap, "Sync Visual Tilemap");
+
+        foreach (var position in positions)
+        {
+            UpdatePlaceholderTile(position);
         }
     }
 }
