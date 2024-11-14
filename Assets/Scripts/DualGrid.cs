@@ -54,7 +54,6 @@ public class DualGrid : MonoBehaviour
     private void OnDisable()
     {
         Tilemap.tilemapPositionsChanged -= OnTilemapPositionsChanged;
-        RuleTile
     }
 
     private void OnValidate()
