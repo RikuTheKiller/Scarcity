@@ -54,6 +54,7 @@ public class DualGrid : MonoBehaviour
     private void OnDisable()
     {
         Tilemap.tilemapPositionsChanged -= OnTilemapPositionsChanged;
+        RuleTile
     }
 
     private void OnValidate()
@@ -76,7 +77,7 @@ public class DualGrid : MonoBehaviour
     {
         BoundsInt placeholderBounds = new(position.x - 1, position.y - 1, 0, 2, 2, 1);
 
-        TileBase[] tiles = new TileBase[4];
+        var tiles = new TileBase[4];
 
         placeholderTilemap.GetTilesBlockNonAlloc(placeholderBounds, tiles);
 
@@ -102,7 +103,8 @@ public class DualGrid : MonoBehaviour
 
         for (int i = 0; i < tiles.Length; i++)
         {
-            if (tiles[i] == primaryTile)
+            var tile = tiles[i];
+            if (!tile || tile == primaryTile)
             {
                 adjacency |= 1 << tiles.Length - 1 - i;
             }
