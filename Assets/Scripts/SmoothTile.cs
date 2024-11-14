@@ -35,7 +35,7 @@ public class SmoothTile : TileBase
         if (spritesByAdjacency?.Length != sprites.Length)
         {
             BuildAdjacencyArray();
-            if (spritesByAdjacency == null) return; // Congrats, you fucked up.
+            if (spritesByAdjacency?.Length != sprites.Length) return; // Congrats, you fucked up.
         }
 
         int adjacencyFlags = 0;
