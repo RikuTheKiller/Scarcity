@@ -1,0 +1,7 @@
+This is a spriting tool originally meant for Space Station 13.
+To run it, use the batch file. It should refresh all sprite sheets.
+
+The order for the sprites is Concave, Convex, Horizontal, Vertical and finally, Flat.
+They're named based on the corner type. You can also change this order via the ".toml" files.
+Also keep in mind when making a new ".toml" file that you have to make its name the same as the ".png" you're targeting.
+Otherwise, shit will just not work.
