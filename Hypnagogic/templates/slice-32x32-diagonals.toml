@@ -1,4 +1,4 @@
-template = "bitmask/slice-32x32"
+template = "slice-32x32"
 
 mode = "BitmaskSlice"
 
