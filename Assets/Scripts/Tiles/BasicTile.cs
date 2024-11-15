@@ -11,7 +11,7 @@ namespace Scarcity
 
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            tileData.transform = Matrix4x4.Translate(new(0, 0, -layer));
+            tileData.transform = Matrix4x4.Translate(new(0, 0, layer * -0.01f));
             tileData.flags = TileFlags.LockTransform;
         }
     }

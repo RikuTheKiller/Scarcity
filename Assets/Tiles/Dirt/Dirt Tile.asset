@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: 0
   sprite: {fileID: 21300000, guid: 66d0fa86f726ddd498a90c14f2dd89d9, type: 3}
-  colliderType: 2
+  colliderType: 0
