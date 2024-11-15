@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c6ad52820143ac4fadf10f47b548224, type: 3}
   m_Name: Stone Tile
   m_EditorClassIdentifier: 
+  layer: 2
   sprites:
   - {fileID: -1095806993, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - {fileID: -559548762, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
@@ -61,6 +62,7 @@ MonoBehaviour:
   - {fileID: -1431414510, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - {fileID: 693022797, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   smoothDiagonals: 1
+  colliderType: 2
   spritesByAdjacency:
   - {fileID: -1095806993, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - {fileID: -559548762, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}

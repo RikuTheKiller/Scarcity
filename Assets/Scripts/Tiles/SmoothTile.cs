@@ -48,9 +48,9 @@ namespace Scarcity
 
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            if (spritesByAdjacency == null) return; // Congrats, you fucked up.
-
             base.GetTileData(position, tilemap, ref tileData);
+
+            if (spritesByAdjacency == null) return; // Congrats, you fucked up.
 
             tileData.colliderType = colliderType;
 
