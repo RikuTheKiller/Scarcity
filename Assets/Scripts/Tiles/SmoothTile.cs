@@ -20,8 +20,6 @@ namespace Scarcity
         /// </summary>
         public bool smoothDiagonals = true;
 
-        public Tile.ColliderType colliderType = Tile.ColliderType.Grid;
-
         [HideInInspector]
         public Sprite[] spritesByAdjacency;
 
@@ -51,8 +49,6 @@ namespace Scarcity
             base.GetTileData(position, tilemap, ref tileData);
 
             if (spritesByAdjacency == null) return; // Congrats, you fucked up.
-
-            tileData.colliderType = colliderType;
 
             int adjacencyFlags = 0;
 

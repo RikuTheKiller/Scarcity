@@ -13,14 +13,11 @@ namespace Scarcity
     {
         public Sprite sprite;
 
-        public Tile.ColliderType colliderType = Tile.ColliderType.Grid;
-
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
             base.GetTileData(position, tilemap, ref tileData);
 
             tileData.sprite = sprite;
-            tileData.colliderType = colliderType;
         }
     }
 }
