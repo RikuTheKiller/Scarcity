@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grass Tile
   m_EditorClassIdentifier: 
   layer: 1
+  colliderType: 0
   sprites:
   - {fileID: -1922194017, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}
   - {fileID: 1985349599, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}
@@ -62,7 +63,6 @@ MonoBehaviour:
   - {fileID: 659824897, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}
   - {fileID: -2129088069, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}
   smoothDiagonals: 1
-  colliderType: 0
   spritesByAdjacency:
   - {fileID: -1922194017, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}
   - {fileID: 1985349599, guid: a296e71efc1e17d47971be7a9464e6cf, type: 3}

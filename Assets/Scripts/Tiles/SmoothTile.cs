@@ -28,25 +28,9 @@ namespace Scarcity
             BuildAdjacencyArray();
         }
 
-        public override void RefreshTile(Vector3Int position, ITilemap tilemap)
+        public override void GetVisualTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            foreach (var offset in AllOffsets)
-            {
-                var adjacentPosition = position + offset;
-
-                TileBase adjacentTile = tilemap.GetTile(adjacentPosition);
-
-                if (adjacentTile == null || adjacentTile != this) continue;
-
-                tilemap.RefreshTile(adjacentPosition);
-            }
-
-            base.RefreshTile(position, tilemap);
-        }
-
-        public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
-        {
-            base.GetTileData(position, tilemap, ref tileData);
+            base.GetVisualTileData(position, tilemap, ref tileData);
 
             if (spritesByAdjacency == null) return; // Congrats, you fucked up.
 
@@ -81,12 +65,6 @@ namespace Scarcity
 
         private void BuildAdjacencyArray()
         {
-            /*if (sprites.Length != (smoothDiagonals ? 47 : 16))
-            {
-                Debug.LogError($"SmoothTile \"{name}\" has an incorrectly sized sprite array. Expected {(smoothDiagonals ? 47 : 16)}, but got {sprites.Length}.");
-                return;
-            }*/
-
             if (!smoothDiagonals)
             {
                 spritesByAdjacency = sprites.ToArray();
@@ -100,95 +78,6 @@ namespace Scarcity
                 spritesByAdjacency[AllIndices[i]] = sprites[i];
             }
         }
-
-        [Flags]
-        public enum Dir
-        {
-            None = 0,
-            North = 1 << 0,
-            South = 1 << 1,
-            East = 1 << 2,
-            West = 1 << 3,
-            Northeast = 1 << 4,
-            Southeast = 1 << 5,
-            Southwest = 1 << 6,
-            Northwest = 1 << 7,
-        }
-
-        public static readonly int[] Cardinals = new int[]
-        {
-            (int)Dir.North,
-            (int)Dir.South,
-            (int)Dir.East,
-            (int)Dir.West,
-        };
-
-        public static readonly int[] Diagonals = new int[]
-        {
-            (int)Dir.Northeast,
-            (int)Dir.Southeast,
-            (int)Dir.Southwest,
-            (int)Dir.Northwest,
-        };
-
-        /// <summary>
-        /// Diagonals adjacent to each cardinal, in the same order as the 'Cardinals' array. This is in nested array form.
-        /// </summary>
-        public static readonly int[][] AdjacentDiagonals = new int[][]
-        {
-            new int[] { (int)Dir.Northeast, (int)Dir.Northwest }, // North
-            new int[] { (int)Dir.Southeast, (int)Dir.Southwest }, // South
-            new int[] { (int)Dir.Northeast, (int)Dir.Southeast }, // East
-            new int[] { (int)Dir.Northwest, (int)Dir.Southwest }, // West
-        };
-
-        /// <summary>
-        /// Vector3Int equivalent for each cardinal, in the same order as the 'Cardinals' array.
-        /// </summary>
-        public static readonly Vector3Int[] CardinalOffsets = new Vector3Int[]
-        {
-            Vector3Int.up, // North
-            Vector3Int.down, // South
-            Vector3Int.right, // East
-            Vector3Int.left, // West
-        };
-
-        /// <summary>
-        /// Vector3Int equivalent for each diagonal, in the same order as the 'Diagonals' array.
-        /// </summary>
-        public static readonly Vector3Int[] DiagonalOffsets = new Vector3Int[]
-        {
-            Vector3Int.up + Vector3Int.right, // Northeast
-            Vector3Int.down + Vector3Int.right, // Southeast
-            Vector3Int.down + Vector3Int.left, // Southwest
-            Vector3Int.up + Vector3Int.left, // Northwest
-        };
-
-        /// <summary>
-        /// Combination of 'CardinalOffsets' and 'DiagonalOffsets' in that order.
-        /// </summary>
-        public static readonly Vector3Int[] AllOffsets = CardinalOffsets.Concat(DiagonalOffsets).ToArray();
-
-        /// <summary>
-        /// Cardinals adjacent to each diagonal, in the same order as the 'Diagonals' array.
-        /// </summary>
-        public static readonly int[] AdjacentCardinals = new int[]
-        {
-            (int)(Dir.North | Dir.East), // Northeast
-            (int)(Dir.South | Dir.East), // Southeast
-            (int)(Dir.South | Dir.West), // Southwest
-            (int)(Dir.North | Dir.West), // Northwest
-        };
-
-        /// <summary>
-        /// All cardinal bitflags in one value.
-        /// </summary>
-        public const int CardinalFlags = (int)(Dir.North | Dir.South | Dir.East | Dir.West);
-
-        /// <summary>
-        /// All diagonal bitflags in one value.
-        /// </summary>
-        public const int DiagonalFlags = (int)(Dir.Northeast | Dir.Southeast | Dir.Southwest | Dir.Northwest);
 
         /// <summary>
         /// Returns all valid adjacency flags, including diagonals. Don't use this directly, read the cached value from 'AllIndices' instead.

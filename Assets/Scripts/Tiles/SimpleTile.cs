@@ -13,9 +13,9 @@ namespace Scarcity
     {
         public Sprite sprite;
 
-        public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
+        public override void GetVisualTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            base.GetTileData(position, tilemap, ref tileData);
+            base.GetVisualTileData(position, tilemap, ref tileData);
 
             tileData.sprite = sprite;
         }
