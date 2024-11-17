@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 1586800394}
   - component: {fileID: 1586800393}
   - component: {fileID: 1586800396}
+  - component: {fileID: 1586800397}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3758,7 +3759,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 62
+      m_TileSpriteIndex: 65
       m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7688,7 +7689,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 65
+      m_TileSpriteIndex: 62
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15440,13 +15441,13 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 1191898739, guid: 9e051b2a6879392418ef3dc9f9bfe85b, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1512781435, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
+    m_Data: {fileID: 1461296947, guid: 9e051b2a6879392418ef3dc9f9bfe85b, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: -1431414510, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 788560539, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 1461296947, guid: 9e051b2a6879392418ef3dc9f9bfe85b, type: 3}
+    m_Data: {fileID: -1512781435, guid: 54d8284c425dec94280c2cb3f6f253c5, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 2100283236, guid: 9e051b2a6879392418ef3dc9f9bfe85b, type: 3}
   - m_RefCount: 2
@@ -19170,7 +19171,7 @@ CompositeCollider2D:
       - {x: -11.998721, y: -13.99855}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
   m_CompositeGameObject: {fileID: 1586800389}
 --- !u!50 &1586800394
 Rigidbody2D:
@@ -19234,8 +19235,23 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 1
+  m_UseDelaunayMesh: 0
 --- !u!114 &1586800396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586800389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4326c70a5768d0445b2dfc854ca62a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compositeCollider: {fileID: 1586800393}
+  shadowCasterPrefab: {fileID: 3013346836786287004, guid: a227b01dad8e6cc42820b99ccc24fe54, type: 3}
+  shadowCasters: []
+--- !u!114 &1586800397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

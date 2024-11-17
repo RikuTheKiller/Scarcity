@@ -12,7 +12,7 @@ namespace Scarcity
 
         public Tile.ColliderType colliderType = Tile.ColliderType.Grid;
 
-        public static GameObject shadowCasterPrefab;
+        //public static GameObject shadowCasterPrefab;
 
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
@@ -20,14 +20,14 @@ namespace Scarcity
             tileData.flags = TileFlags.LockTransform;
             tileData.colliderType = colliderType;
 
-            if (!Application.isPlaying || colliderType == Tile.ColliderType.None) return;
+            /*if (!Application.isPlaying || colliderType == Tile.ColliderType.None) return;
 
             if (!shadowCasterPrefab)
             {
                 shadowCasterPrefab = Resources.Load<GameObject>("Tile Shadow Caster");
             }
 
-            tileData.gameObject = shadowCasterPrefab;
+            tileData.gameObject = shadowCasterPrefab;*/
         }
     }
 }
