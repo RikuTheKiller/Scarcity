@@ -13,8 +13,6 @@ namespace Scarcity
 
         public Tile.ColliderType colliderType = Tile.ColliderType.Grid;
 
-        public static GameObject shadowCasterPrefab;
-
         public override void RefreshTile(Vector3Int position, ITilemap tilemap)
         {
             foreach (var offset in AllOffsets)
@@ -33,10 +31,6 @@ namespace Scarcity
 
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            tileData.transform = Matrix4x4.Translate(new(0, 0, layer * -0.01f));
-            tileData.flags = TileFlags.LockTransform;
-            tileData.colliderType = colliderType;
-
             if (!IsVisible(position, tilemap, ref tileData)) return;
 
             GetVisualTileData(position, tilemap, ref tileData);
@@ -44,14 +38,9 @@ namespace Scarcity
 
         public virtual void GetVisualTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            if (colliderType == Tile.ColliderType.None) return;
-
-            if (!shadowCasterPrefab)
-            {
-                shadowCasterPrefab = Resources.Load<GameObject>("Tile Shadow Caster");
-            }
-
-            tileData.gameObject = shadowCasterPrefab;
+            tileData.transform = Matrix4x4.Translate(new(0, 0, layer * -0.01f));
+            tileData.flags = TileFlags.LockTransform;
+            tileData.colliderType = colliderType;
         }
 
         public virtual bool IsVisible(Vector3Int position, ITilemap tilemap, ref TileData tileData)

@@ -22,7 +22,7 @@ namespace Scarcity
 
         private void FixedUpdate()
         {
-            rigidbody.velocity = Vector3.MoveTowards(rigidbody.velocity, Input.Move.Value * maxSpeed, Time.deltaTime * maxSpeed / accelerationTime);
+            rigidbody.linearVelocity = Vector3.MoveTowards(rigidbody.linearVelocity, Input.Move.Value * maxSpeed, Time.deltaTime * maxSpeed / accelerationTime);
         }
 
         private void OnEnable()
