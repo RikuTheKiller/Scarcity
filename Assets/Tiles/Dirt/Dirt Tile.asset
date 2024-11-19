@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2febe8ae62d49443b6c125b83a8d962, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aeac9ef3bae2dd43b006709ac5da2aa, type: 3}
   m_Name: Dirt Tile
   m_EditorClassIdentifier: 
   layer: 0
-  sprite: {fileID: 21300000, guid: 66d0fa86f726ddd498a90c14f2dd89d9, type: 3}
   colliderType: 0
+  sprite: {fileID: 21300000, guid: 0b409ee284f14854a9d278188e892ae5, type: 3}

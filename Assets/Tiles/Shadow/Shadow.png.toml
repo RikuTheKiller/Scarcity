@@ -1,0 +1,13 @@
+template = "slice-32x32-diagonals"
+
+[icon_size]
+x = 128
+y = 128
+
+[output_icon_size]
+x = 128
+y = 128
+
+[cut_pos]
+x = 64
+y = 64

@@ -1,0 +1,1818 @@
+fileFormatVersion: 2
+guid: 1717121c380dcb84a8d7c6ca5fec295c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShadowTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 5, y: 3}
+        - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 3, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85314ad7cf314e94b9b536b3881c44f0
+      internalID: 1913978475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -10}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 10, y: -12}
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 3, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834dcef67868b5345b66cc16086ffb96
+      internalID: -1980506322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 10}
+        - {x: 10, y: 12}
+        - {x: -10, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 3}
+        - {x: 3, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 26efa79d4adad874dbe512913e327077
+      internalID: 943034972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      physicsShape:
+      - - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: d9fe6979220f5674abc3c528e39965e6
+      internalID: 1800324063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 64, y: -5}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1a926b66f0747d547b129ec7b895164a
+      internalID: 2136272418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 64, y: -5}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 3324caebfc0faa847a6771f60d415997
+      internalID: -1076305789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ef0468c9f87e2e0479c7cafc5d23d9db
+      internalID: -1324275569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8f4cb07aa12b91f458f323ff917e574c
+      internalID: -1499717878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -10}
+        - {x: 12, y: 10}
+        - {x: 10, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: 10, y: -12}
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 5, y: 3}
+        - {x: 3, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: 3, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ca384704a918ece40b0ba8226d022f98
+      internalID: 79315728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -10}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: 10, y: -12}
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: 3, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: cf77160ee9cb0b7499bd48394fdd30ea
+      internalID: 330715491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 10}
+        - {x: 10, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 3}
+        - {x: 3, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b6e8f6a48204d43498fd49ac824d3692
+      internalID: 2130387906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b55df3091f2beb749885c31ffefd4649
+      internalID: 181696636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5aba645654f85f14b9d81256bb3b6723
+      internalID: -293561160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 752b8c7bab51642499c0a7dab21c5f7d
+      internalID: -1565273825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a273593af510f7848a87aafa1f7d6634
+      internalID: 49827532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 782a20eab9cc81249b503e9f16b428f2
+      internalID: 1997947844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -10}
+        - {x: -10, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -3}
+        - {x: -3, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 98dc4aed29ac37b438c95facbf9e30cc
+      internalID: -899493981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0f76c18dbe0cc444485272fceda35b20
+      internalID: 347560449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: fe870fedd7810d140b6eff0edcb9c9ec
+      internalID: 2083441331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4e61c6920d5085844b18212ec49e7257
+      internalID: -993226100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: -10, y: 12}
+        - {x: -12, y: 10}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: -3, y: 5}
+        - {x: -5, y: 3}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 36b165209ca9b834c99216b6a0bc557a
+      internalID: 104695912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 23f45bc2772443047b05fd932b9d7fb0
+      internalID: -748260700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 40ee6134d256a1849b2d0cc88591d405
+      internalID: -1416717292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f1ac11000b3cfcb46901cecdf90811c1
+      internalID: -1978215934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: aca4115ac2254d64fb265324d1c9ff64
+      internalID: 1415996552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a7bbfd6d4c1fb6b46a286cae666e7ca4
+      internalID: -1053588322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_26
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 10}
+        - {x: 10, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 3}
+        - {x: 3, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b36cd2602487aab45bb833ac0ccb66fe
+      internalID: 838797564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 27830db7c2d55a048bb79d317bfa97ff
+      internalID: -1007536215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 08fd5a95fffa33b498412778f37fb5fd
+      internalID: 1426369549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 6d7053e27980c8045ae234f6e2c7c48b
+      internalID: 998852734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9f9d8ced344e0c74fac19d7f492a2568
+      internalID: 545001369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a9d15bd39ee31174a8c923ae57996a08
+      internalID: 965238404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: cc98021bd3b32c541a7779c33ec87736
+      internalID: 1279677375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_33
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -12, y: 64}
+        - {x: -12, y: 12}
+        - {x: -64, y: 12}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -5, y: 64}
+        - {x: -5, y: 5}
+        - {x: -64, y: 5}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 351468bb8132f3744aa8a7ec11ce5740
+      internalID: -1953039478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -10}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: 10, y: -12}
+      physicsShape:
+      - - {x: 5, y: -3}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: 3, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2175c57a5fea60e438db23782a19d527
+      internalID: -1195494926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 80e3f55e5c56c8a45abe3b2e754c45b1
+      internalID: 1844780459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 62fce885bce61344b9194f2b58def9c1
+      internalID: -2133451465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 3fbd7a21401a8044caa60e5927dcc7bc
+      internalID: -1833542099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: 64, y: -12}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: 64, y: -5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 328c2503c1f291e46ab8fbb76f30185d
+      internalID: -464132077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_39
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: fabd25397099ffc4cba938694c205b57
+      internalID: 253448780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_40
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 667dacf9885871c4aa86b114b6d60c8b
+      internalID: -154350177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -12}
+        - {x: -12, y: -12}
+        - {x: -12, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -5}
+        - {x: -5, y: -5}
+        - {x: -5, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8698788fd128328458a872a43705a005
+      internalID: 2013756215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a27b774d34ca0dd428324716c5ced810
+      internalID: 645820415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: da4f42f240d1c2545bf74918e94c8061
+      internalID: -1813508942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 12, y: -12}
+        - {x: 64, y: -12}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 12, y: -64}
+      physicsShape:
+      - - {x: 5, y: -5}
+        - {x: 64, y: -5}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 5, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 90fa73cd56c532e418cb940bd2fb591c
+      internalID: 962494512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 12}
+        - {x: 12, y: 12}
+        - {x: 12, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 5}
+        - {x: 5, y: 5}
+        - {x: 5, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 834f148a5ba3b9d45a983fad07bf9bf9
+      internalID: -1858022964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowTiles_46
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      physicsShape:
+      - - {x: 64, y: 64}
+        - {x: -64, y: 64}
+        - {x: -64, y: -64}
+        - {x: 64, y: -64}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 159a82d2f66f367419e2c682d9503990
+      internalID: 1696936194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ShadowTiles_0: 1913978475
+      ShadowTiles_1: -1980506322
+      ShadowTiles_10: 2130387906
+      ShadowTiles_11: 181696636
+      ShadowTiles_12: -293561160
+      ShadowTiles_13: -1565273825
+      ShadowTiles_14: 49827532
+      ShadowTiles_15: 1997947844
+      ShadowTiles_16: -899493981
+      ShadowTiles_17: 347560449
+      ShadowTiles_18: 2083441331
+      ShadowTiles_19: -993226100
+      ShadowTiles_2: 943034972
+      ShadowTiles_20: 104695912
+      ShadowTiles_21: -748260700
+      ShadowTiles_22: -1416717292
+      ShadowTiles_23: -1978215934
+      ShadowTiles_24: 1415996552
+      ShadowTiles_25: -1053588322
+      ShadowTiles_26: 838797564
+      ShadowTiles_27: -1007536215
+      ShadowTiles_28: 1426369549
+      ShadowTiles_29: 998852734
+      ShadowTiles_3: 1800324063
+      ShadowTiles_30: 545001369
+      ShadowTiles_31: 965238404
+      ShadowTiles_32: 1279677375
+      ShadowTiles_33: -1953039478
+      ShadowTiles_34: -1195494926
+      ShadowTiles_35: 1844780459
+      ShadowTiles_36: -2133451465
+      ShadowTiles_37: -1833542099
+      ShadowTiles_38: -464132077
+      ShadowTiles_39: 253448780
+      ShadowTiles_4: 2136272418
+      ShadowTiles_40: -154350177
+      ShadowTiles_41: 2013756215
+      ShadowTiles_42: 645820415
+      ShadowTiles_43: -1813508942
+      ShadowTiles_44: 962494512
+      ShadowTiles_45: -1858022964
+      ShadowTiles_46: 1696936194
+      ShadowTiles_5: -1076305789
+      ShadowTiles_6: -1324275569
+      ShadowTiles_7: -1499717878
+      ShadowTiles_8: 79315728
+      ShadowTiles_9: 330715491
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

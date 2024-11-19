@@ -18,7 +18,7 @@ namespace Scarcity
         }
 
         public static readonly InputValue<Vector2> Move = Actions.Player.Move;
-        public static readonly InputValue<Vector2> PointerPosition = Actions.Player.PointerPosition;
+        public static readonly InputValue<Vector2> Point = Actions.UI.Point;
     }
 
     public class InputValue<T> where T : struct

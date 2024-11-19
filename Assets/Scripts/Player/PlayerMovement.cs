@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Scarcity
 {
@@ -10,10 +11,8 @@ namespace Scarcity
         public Rigidbody2D rigidbody;
         public Transform pivot;
 
-        public float maxSpeed = 3;
+        public float maxSpeed = 4;
         public float accelerationTime = 0.2f;
-
-        private Coroutine moveRoutine;
 
         private void Reset()
         {
@@ -27,12 +26,12 @@ namespace Scarcity
 
         private void OnEnable()
         {
-            Input.PointerPosition.Performed += OnPointerPosition;
+            Input.Point.Performed += OnPointerPosition;
         }
 
         private void OnDisable()
         {
-            Input.PointerPosition.Performed -= OnPointerPosition;
+            Input.Point.Performed -= OnPointerPosition;
         }
 
         private void OnPointerPosition(Vector2 position)

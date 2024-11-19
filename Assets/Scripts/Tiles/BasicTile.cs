@@ -31,7 +31,9 @@ namespace Scarcity
 
         public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
         {
-            if (!IsVisible(position, tilemap, ref tileData)) return;
+            bool visible = IsVisible(position, tilemap, ref tileData);
+
+            if (Application.isPlaying && !IsVisible(position, tilemap, ref tileData)) return;
 
             GetVisualTileData(position, tilemap, ref tileData);
         }
