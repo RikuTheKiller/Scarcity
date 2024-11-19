@@ -23,6 +23,9 @@ namespace Scarcity
         [HideInInspector]
         public Sprite[] spritesByAdjacency;
 
+        public SmoothingGroup smoothWithGroup = SmoothingGroup.Self;
+        public SmoothingGroup smoothGroup = 0;
+
         private void OnValidate()
         {
             BuildAdjacencyArray();
@@ -40,7 +43,7 @@ namespace Scarcity
             {
                 var adjacentTile = tilemap.GetTile(position + CardinalOffsets[i]);
 
-                if (adjacentTile == null || adjacentTile != this) continue;
+                if (!CanSmoothWith(adjacentTile)) continue;
 
                 adjacencyFlags |= Cardinals[i];
             }
@@ -55,12 +58,18 @@ namespace Scarcity
 
                 var adjacentTile = tilemap.GetTile(position + DiagonalOffsets[i]);
 
-                if (adjacentTile == null || adjacentTile != this) continue;
+                if (!CanSmoothWith(adjacentTile)) continue;
 
                 adjacencyFlags |= Diagonals[i];
             }
 
             tileData.sprite = spritesByAdjacency[adjacencyFlags];
+        }
+
+        public bool CanSmoothWith(TileBase otherTile)
+        {
+            if (otherTile == this && (smoothWithGroup & SmoothingGroup.Self) != 0) return true;
+            return otherTile != null && otherTile is SmoothTile smoothTile && ((smoothWithGroup & smoothTile.smoothGroup) != 0);
         }
 
         private void BuildAdjacencyArray()
@@ -122,6 +131,14 @@ namespace Scarcity
         /// All valid adjacency flags, including diagonals.
         /// </summary>
         public static readonly int[] AllIndices = GetAllIndices();
+
+        [Serializable, Flags]
+        public enum SmoothingGroup
+        {
+            Self = 1 << 1,
+            Grass = 1 << 2,
+            Path = 1 << 3,
+        }
     }
 }
 

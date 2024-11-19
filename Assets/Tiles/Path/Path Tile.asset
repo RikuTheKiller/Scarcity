@@ -320,3 +320,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: -550779559, guid: d1dc648074c1d8d4b986c49bc02b926c, type: 3}
+  smoothWithGroup: 2
+  smoothGroup: 8

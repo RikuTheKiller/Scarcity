@@ -36,7 +36,7 @@ namespace Scarcity
 
         private void OnPointerPosition(Vector2 position)
         {
-            pivot.up = (Vector2)Camera.main.ScreenToWorldPoint(position) - (Vector2)transform.position;
+            pivot.rotation = Quaternion.LookRotation(Vector3.forward, (Vector2)Camera.main.ScreenToWorldPoint(position) - (Vector2)transform.position);
         }
     }
 }
