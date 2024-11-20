@@ -9,8 +9,9 @@ namespace Scarcity
         public Rigidbody2D rigidbody;
 
         public float speed = 10;
-        public float damage = 0;
+        public int damage = 0;
         public float lifetime = 10;
+        public LayerMask layerMask;
 
         [HideInInspector]
         public float endTime = 0;
@@ -33,16 +34,21 @@ namespace Scarcity
             Fire();
         }
 
-        public virtual bool CanHit(Collision collision) => true;
+        public virtual bool CanHit(Collision collision) => (collision.gameObject.layer & layerMask) != 0;
 
         public virtual void OnHit(Collision collision)
         {
+            if (collision.gameObject.TryGetComponent(out BasicHealth health))
+            {
+                health.TakeDamage(damage);
+            }
+
             gameObject.SetActive(false);
         }
 
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (!CanHit(collision)) OnHit(collision);
+            if (CanHit(collision)) OnHit(collision);
         }
     }
 }
