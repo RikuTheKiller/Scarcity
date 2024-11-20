@@ -1,4 +1,4 @@
-template = "slice-32x32-diagonals"
+template = "slice-32x32"
 
 [icon_size]
 x = 40

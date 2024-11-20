@@ -138,6 +138,7 @@ namespace Scarcity
             Self = 1 << 1,
             Grass = 1 << 2,
             Path = 1 << 3,
+            EdgeWall = 1 << 4,
         }
     }
 }

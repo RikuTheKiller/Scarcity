@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Scarcity
 {
@@ -13,10 +12,24 @@ namespace Scarcity
 
         public float maxSpeed = 4;
         public float accelerationTime = 0.2f;
+        public float turnSpeed = 2;
+
+        public Texture2D cursorTexture;
+        public Vector2 cursorOffset;
 
         private void Reset()
         {
             rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnEnable()
+        {
+            Cursor.SetCursor(cursorTexture, cursorOffset, CursorMode.Auto);
+        }
+
+        private void OnDisable()
+        {
+            Cursor.SetCursor(null, Vector3.zero, CursorMode.Auto);
         }
 
         private void FixedUpdate()
@@ -24,19 +37,10 @@ namespace Scarcity
             rigidbody.linearVelocity = Vector3.MoveTowards(rigidbody.linearVelocity, Input.Move.Value * maxSpeed, Time.deltaTime * maxSpeed / accelerationTime);
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            Input.Point.Performed += OnPointerPosition;
-        }
-
-        private void OnDisable()
-        {
-            Input.Point.Performed -= OnPointerPosition;
-        }
-
-        private void OnPointerPosition(Vector2 position)
-        {
-            pivot.rotation = Quaternion.LookRotation(Vector3.forward, (Vector2)Camera.main.ScreenToWorldPoint(position) - (Vector2)transform.position);
+            Quaternion target = Quaternion.LookRotation(Vector3.forward, (Vector2)Camera.main.ScreenToWorldPoint(Input.Point.Value) - (Vector2)transform.position);
+            pivot.rotation = Quaternion.RotateTowards(pivot.rotation, target, Time.deltaTime * turnSpeed * 360);
         }
     }
 }
