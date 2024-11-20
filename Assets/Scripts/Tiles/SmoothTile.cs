@@ -48,7 +48,11 @@ namespace Scarcity
                 adjacencyFlags |= Cardinals[i];
             }
 
-            if (!smoothDiagonals) return;
+            if (!smoothDiagonals)
+            {
+                tileData.sprite = spritesByAdjacency[adjacencyFlags];
+                return;
+            }
 
             for (int i = 0; i < Diagonals.Length; i++)
             {
