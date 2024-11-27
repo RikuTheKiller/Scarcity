@@ -8,6 +8,7 @@ namespace Scarcity
     public class Projectile2D : MonoBehaviour
     {
         public Rigidbody2D rigidbody;
+        public ObjectPool pool;
 
         public float speed = 10;
         public int damage = 0;
@@ -17,45 +18,54 @@ namespace Scarcity
         [HideInInspector]
         public float endTime = 0;
 
-        public event Action<Projectile2D, Collision> OnHit;
-
-        protected virtual void Reset()
+        private void Reset()
         {
             rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        protected virtual void Update()
+        private void OnValidate()
+        {
+            if (!pool || pool.prefab == this) return;
+            pool.prefab = this;
+        }
+
+        private void Update()
         {
             if (Time.time >= endTime) gameObject.SetActive(false);
         }
 
-        public virtual void Fire()
+        private void OnDisable()
+        {
+            pool.Release(this);
+        }
+
+        public void Fire()
         {
             gameObject.SetActive(true);
             rigidbody.linearVelocity = transform.up * speed;
             endTime = Time.time + lifetime;
         }
 
-        public virtual void Fire(Vector2 position, Vector2 direction)
+        public void Fire(Vector2 position, Vector2 direction)
         {
             transform.SetPositionAndRotation(position, Quaternion.LookRotation(Vector3.forward, direction));
             Fire();
         }
 
-        public virtual void Fire(Transform from)
+        public void Fire(Transform from)
         {
             Fire(from.position, from.up);
         }
 
-        public virtual void Fire(Rigidbody2D from)
+        public void Fire(Rigidbody2D from)
         {
             Fire(from.transform);
             rigidbody.linearVelocity += from.linearVelocity;
         }
 
-        public virtual bool CanHit(Collision collision) => (collision.gameObject.layer & layerMask) != 0;
+        public bool CanHit(Collision2D collision) => ((1 << collision.gameObject.layer) & layerMask) != 0;
 
-        public virtual void Hit(Collision collision)
+        public void Hit(Collision2D collision)
         {
             if (collision.gameObject.TryGetComponent(out Health health))
             {
@@ -63,11 +73,9 @@ namespace Scarcity
             }
 
             gameObject.SetActive(false);
-
-            OnHit?.Invoke(this, collision);
         }
 
-        protected virtual void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             if (CanHit(collision)) Hit(collision);
         }

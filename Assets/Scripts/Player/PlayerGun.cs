@@ -25,14 +25,8 @@ namespace Scarcity
         public void Fire()
         {
             if (!projectilePrefab) return;
-            Projectile2D projectile = Instantiate(projectilePrefab);
-            projectile.OnHit += OnHit;
-            projectile.Fire(transform);
-        }
-
-        private void OnHit(Projectile2D projectile, Collision collision)
-        {
-            Destroy(projectile);
+            var projectile = projectilePrefab.pool.Get<Projectile2D>();
+            projectile.Fire(rigidbody);
         }
     }
 }
