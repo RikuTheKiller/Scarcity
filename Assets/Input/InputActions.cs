@@ -51,7 +51,7 @@ namespace Scarcity
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""c834b0ce-e0a5-44e7-8b8c-d788934be89b"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -60,7 +60,7 @@ namespace Scarcity
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""efbf214b-3b4f-4e83-8714-4cf95893dfb7"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Hold"",
                     ""initialStateCheck"": false
@@ -516,7 +516,7 @@ namespace Scarcity
                     ""name"": ""Submit"",
                     ""type"": ""Button"",
                     ""id"": ""666b023b-8a35-4f5a-b8cd-0927878b8f11"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -525,7 +525,7 @@ namespace Scarcity
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
                     ""id"": ""29c1346d-1ef5-4a36-86a9-74f8e5fb7456"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
