@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,6 +16,13 @@ namespace Scarcity
 
         [HideInInspector]
         public float endTime = 0;
+
+        public event Action<Projectile2D, Collision> OnHit;
+
+        protected virtual void Reset()
+        {
+            rigidbody = GetComponent<Rigidbody2D>();
+        }
 
         protected virtual void Update()
         {
@@ -34,21 +42,34 @@ namespace Scarcity
             Fire();
         }
 
+        public virtual void Fire(Transform from)
+        {
+            Fire(from.position, from.up);
+        }
+
+        public virtual void Fire(Rigidbody2D from)
+        {
+            Fire(from.transform);
+            rigidbody.linearVelocity += from.linearVelocity;
+        }
+
         public virtual bool CanHit(Collision collision) => (collision.gameObject.layer & layerMask) != 0;
 
-        public virtual void OnHit(Collision collision)
+        public virtual void Hit(Collision collision)
         {
-            if (collision.gameObject.TryGetComponent(out BasicHealth health))
+            if (collision.gameObject.TryGetComponent(out Health health))
             {
                 health.TakeDamage(damage);
             }
 
             gameObject.SetActive(false);
+
+            OnHit?.Invoke(this, collision);
         }
 
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (CanHit(collision)) OnHit(collision);
+            if (CanHit(collision)) Hit(collision);
         }
     }
 }
