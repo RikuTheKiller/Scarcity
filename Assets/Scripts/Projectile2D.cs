@@ -13,7 +13,8 @@ namespace Scarcity
         public float speed = 10;
         public int damage = 0;
         public float lifetime = 10;
-        public LayerMask layerMask;
+
+        public LayerMask LayerMask { get => rigidbody.includeLayers; set => rigidbody.includeLayers = value; }
 
         [HideInInspector]
         public float endTime = 0;
@@ -31,17 +32,11 @@ namespace Scarcity
 
         private void Update()
         {
-            if (Time.time >= endTime) gameObject.SetActive(false);
-        }
-
-        private void OnDisable()
-        {
-            pool.Release(this);
+            if (Time.time >= endTime) pool.Release(this);
         }
 
         public void Fire()
         {
-            gameObject.SetActive(true);
             rigidbody.linearVelocity = transform.up * speed;
             endTime = Time.time + lifetime;
         }
@@ -57,13 +52,11 @@ namespace Scarcity
             Fire(from.position, from.up);
         }
 
-        public void Fire(Rigidbody2D from)
+        public void Fire(Transform from, Vector2 baseVelocity)
         {
-            Fire(from.transform);
-            rigidbody.linearVelocity += from.linearVelocity;
+            Fire(from);
+            rigidbody.linearVelocity += baseVelocity;
         }
-
-        public bool CanHit(Collision2D collision) => ((1 << collision.gameObject.layer) & layerMask) != 0;
 
         public void Hit(Collision2D collision)
         {
@@ -72,12 +65,12 @@ namespace Scarcity
                 health.TakeDamage(damage);
             }
 
-            gameObject.SetActive(false);
+            pool.Release(this);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (CanHit(collision)) Hit(collision);
+            Hit(collision);
         }
     }
 }
