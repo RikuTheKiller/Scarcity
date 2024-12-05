@@ -6,6 +6,7 @@ namespace Scarcity
     {
         public Rigidbody2D rigidbody;
         public Projectile2D projectilePrefab;
+        public LayerMask targetLayers;
 
         private void Reset()
         {
@@ -25,14 +26,11 @@ namespace Scarcity
         public void Fire()
         {
             if (!projectilePrefab) return;
-            Projectile2D projectile = Instantiate(projectilePrefab);
-            projectile.OnHit += OnHit;
-            projectile.Fire(transform);
-        }
 
-        private void OnHit(Projectile2D projectile, Collision collision)
-        {
-            Destroy(projectile);
+            var projectile = projectilePrefab.pool.Get<Projectile2D>();
+
+            projectile.LayerMask = targetLayers;
+            projectile.Fire(transform, rigidbody.linearVelocity);
         }
     }
 }

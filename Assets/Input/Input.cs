@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace Scarcity
 {
@@ -25,6 +23,7 @@ namespace Scarcity
 
         // UI Actions
         public static readonly InputValue<Vector2> Point = Actions.UI.Point;
+        public static readonly InputButton Cancel = Actions.UI.Cancel;
     }
 
     public class InputValue<T> where T : struct

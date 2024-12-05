@@ -7,6 +7,7 @@ namespace Scarcity
         public Transform pivot;
 
         public bool instant = false;
+
         public float turnSpeed = 2;
 
         private void Reset()

@@ -520,7 +520,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.05
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -567,6 +567,10 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 6877444996197869382}
+    - target: {fileID: -1739953440599640263, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
+      propertyPath: instant
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 194644221542699953, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
