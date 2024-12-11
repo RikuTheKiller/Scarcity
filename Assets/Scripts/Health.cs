@@ -10,7 +10,7 @@ namespace Scarcity
 
         public void SetHealth(int amount)
         {
-            health = Math.Clamp(health + amount, 0, maxHealth);
+            health = Math.Clamp(amount, 0, maxHealth);
             if (health <= 0) Destroy(gameObject);
         }
 

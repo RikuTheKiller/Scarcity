@@ -49,7 +49,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7952514561322427412, guid: d4fd4a5e5d11b7c49a4852d719d05410, type: 3}
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!212 &8042879265060692474
 SpriteRenderer:
   m_ObjectHideFlags: 0

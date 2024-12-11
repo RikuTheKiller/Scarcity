@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Scarcity
 {
-    [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile2D : MonoBehaviour
     {
         public Rigidbody2D rigidbody;
@@ -58,9 +57,9 @@ namespace Scarcity
             rigidbody.linearVelocity += baseVelocity;
         }
 
-        public void Hit(Collision2D collision)
+        public void Hit(Collider2D collider)
         {
-            if (collision.gameObject.TryGetComponent(out Health health))
+            if (collider.attachedRigidbody.TryGetComponent(out Health health))
             {
                 health.TakeDamage(damage);
             }
@@ -68,9 +67,9 @@ namespace Scarcity
             pool.Release(this);
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Hit(collision);
+            Hit(collider);
         }
     }
 }
