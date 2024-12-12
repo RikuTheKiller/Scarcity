@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e55dda2060478794c96d3e4056e0e624
+guid: 140e38cab9a2ab84cb2075713cbc7358
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,7 +11,7 @@ ScriptedImporter:
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 256
+    spritePixelsToUnits: 32
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -50,7 +50,7 @@ ScriptedImporter:
     flipbookColumns: 0
     ignorePngGamma: 0
     cookieMode: 0
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -73,7 +73,7 @@ ScriptedImporter:
   previousAsepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
-    layerImportMode: 0
+    layerImportMode: 1
     defaultPivotSpace: 1
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -86,7 +86,7 @@ ScriptedImporter:
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
-    layerImportMode: 0
+    layerImportMode: 1
     defaultPivotSpace: 1
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638695917335852858
+  platformSettingsDirtyTick: 638696015624431985
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,7 +122,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Body
+  - name: Portal_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 128
-      height: 56
-    spriteID: cb62727f44588ab448a3301e0bbc9640
+      width: 18
+      height: 32
+    spriteID: 7dbd2c0f80d9b62409a08fc821fb26d4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -143,7 +143,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Left Hand
+  - name: Portal_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,11 +151,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 140
-      y: 92
-      width: 32
+      x: 4
+      y: 44
+      width: 18
       height: 32
-    spriteID: 51d39b6cc93455547b5f6ff7ea995a07
+    spriteID: 25b36fcadd629f3479ab87b8af2abe40
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -163,8 +163,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 140, y: 92}
-  - name: Right Hand
+    uvTransform: {x: 4, y: 44}
+  - name: Portal_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -172,11 +172,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 180
-      y: 92
-      width: 32
+      x: 4
+      y: 84
+      width: 18
       height: 32
-    spriteID: 62a2139491611fc44a06ca3cad676d7c
+    spriteID: a2809f03d5ae832428674ffcf640b636
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -184,8 +184,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 180, y: 92}
-  - name: Head
+    uvTransform: {x: 4, y: 84}
+  - name: Portal_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -193,11 +193,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 140
+      x: 30
       y: 4
-      width: 80
-      height: 80
-    spriteID: 8854cf005ab6b2147b7629c24d8532bc
+      width: 18
+      height: 32
+    spriteID: fdef0612bd766734395808a9013a3699
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -205,79 +205,112 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 140, y: 4}
+    uvTransform: {x: 30, y: 4}
+  - name: Portal_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 44
+      width: 18
+      height: 32
+    spriteID: e895c85c7fd16354db9d0c78efb61acb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 44}
+  - name: Portal_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 84
+      width: 18
+      height: 32
+    spriteID: 936730b78a62d814bb0798e149229084
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 84}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1029820646
-    name: Body
+    guid: -859236608
+    name: Portal
     layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: Body
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 64
-        y: 96
-        width: 128
-        height: 56
-      spriteId: cb62727f44588ab448a3301e0bbc9640
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 2
-    guid: 1254207190
-    name: Left Hand
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Left Hand
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 56
-        y: 168
-        width: 32
+        x: 7
+        y: 0
+        width: 18
         height: 32
-      spriteId: 51d39b6cc93455547b5f6ff7ea995a07
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 3
-    guid: -2080715912
-    name: Right Hand
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Right Hand
-      frameIndex: 0
+      spriteId: 7dbd2c0f80d9b62409a08fc821fb26d4
+    - name: Frame_1
+      frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 168
-        y: 168
-        width: 32
+        x: 7
+        y: 0
+        width: 18
         height: 32
-      spriteId: 62a2139491611fc44a06ca3cad676d7c
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 1
-    guid: 1403077921
-    name: Head
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Head
-      frameIndex: 0
+      spriteId: 25b36fcadd629f3479ab87b8af2abe40
+    - name: Frame_2
+      frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 88
-        y: 96
-        width: 80
-        height: 80
-      spriteId: 8854cf005ab6b2147b7629c24d8532bc
+        x: 7
+        y: 0
+        width: 18
+        height: 32
+      spriteId: a2809f03d5ae832428674ffcf640b636
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 0
+        width: 18
+        height: 32
+      spriteId: fdef0612bd766734395808a9013a3699
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 0
+        width: 18
+        height: 32
+      spriteId: e895c85c7fd16354db9d0c78efb61acb
+    - name: Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 0
+        width: 18
+        height: 32
+      spriteId: 936730b78a62d814bb0798e149229084
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -299,7 +332,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
@@ -320,4 +353,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 256, y: 256}
+  canvasSize: {x: 32, y: 32}

@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 9090253049859541344}
   - component: {fileID: 7448832453138068128}
   m_Layer: 0
-  m_Name: Pivot
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 0.21875}
+  m_Size: {x: 0.4375, y: 0.15625}
   m_EdgeRadius: 0.03125
 --- !u!1 &8239508420940920865
 GameObject:
