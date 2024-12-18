@@ -59,7 +59,7 @@ namespace Scarcity
 
         public void Hit(Collider2D collider)
         {
-            if (collider.attachedRigidbody.TryGetComponent(out Health health))
+            if (collider.attachedRigidbody && collider.attachedRigidbody.TryGetComponent(out Health health))
             {
                 health.TakeDamage(damage);
             }

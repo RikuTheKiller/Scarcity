@@ -7,6 +7,8 @@ namespace Scarcity
     {
         public Wave wave;
 
+        public float startDelay;
+
         public NavigationNode startNode;
 
         public Quaternion startRotation;
@@ -33,6 +35,8 @@ namespace Scarcity
         private IEnumerator WaveCoroutine()
         {
             if (!wave) yield break;
+
+            yield return new WaitForSeconds(startDelay);
 
             WaveInfo[] waves = wave.Cache();
 
