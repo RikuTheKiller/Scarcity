@@ -28,9 +28,25 @@ namespace Scarcity
 
         private void Update()
         {
-            var targetRotation = Quaternion.LookRotation(Vector3.forward, TargetNode.transform.position);
-            var finalRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180 * Time.deltaTime);
-            var finalPosition = Vector3.MoveTowards(transform.position, TargetNode.transform.position, turnSpeed * 360 * Time.deltaTime);
+            var targetRotation = Quaternion.LookRotation(Vector3.forward, TargetNode.transform.position - transform.position);
+            var finalRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * 360 * Time.deltaTime);
+            var finalPosition = transform.position;
+
+            var step = speed * Time.deltaTime;
+
+            while (TargetNode && step > 0)
+            {
+                var distance = Vector3.Distance(transform.position, TargetNode.transform.position);
+
+                finalPosition = Vector3.MoveTowards(finalPosition, TargetNode.transform.position, step);
+
+                step -= distance;
+
+                if (finalPosition == TargetNode.transform.position)
+                {
+                    TargetNode = TargetNode.GetNext();
+                }
+            }
 
             transform.SetPositionAndRotation(finalPosition, finalRotation);
         }

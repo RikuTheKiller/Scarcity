@@ -3,11 +3,20 @@ using UnityEngine;
 
 namespace Scarcity
 {
-    public class WaveManager : MonoBehaviour
+    public class WaveSpawner : MonoBehaviour
     {
         public Wave wave;
 
+        public NavigationNode startNode;
+
+        public Quaternion startRotation;
+
         private Coroutine waveCoroutine;
+
+        private void Reset()
+        {
+            startNode = GetComponent<NavigationNode>();
+        }
 
         private void OnEnable()
         {
@@ -29,7 +38,13 @@ namespace Scarcity
 
             foreach (WaveInfo wave in waves)
             {
-                Instantiate(wave.Obj, transform.position, transform.rotation);
+                GameObject instance = Instantiate(wave.Obj, transform.position, startRotation);
+
+                if (instance && instance.TryGetComponent(out NavigationUser navigationUser))
+                {
+                    navigationUser.TargetNode = startNode;
+                }
+
                 yield return new WaitForSeconds(wave.Delay);
             }
         }

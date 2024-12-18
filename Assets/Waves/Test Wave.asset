@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Test Wave
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 3426709130290107539, guid: accc056e4e1be6742a8636a0291f79b3, type: 3}
+  - {fileID: 5050316591943813096, guid: 587d579a09e91464595f8f648f3ff107, type: 3}
   count: 10
-  delay: 0.1
+  delay: 0.5

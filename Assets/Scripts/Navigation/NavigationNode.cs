@@ -7,9 +7,13 @@ namespace Scarcity
         [SerializeField]
         private NavigationNode[] targetNodes;
 
+        private int targetIndex = 0;
+
         public NavigationNode GetNext()
         {
-            return targetNodes.Length != 0 ? targetNodes[Random.Range(0, targetNodes.Length)] : null;
+            if (targetNodes.Length == 0) return null;
+            targetIndex = (targetIndex + 1) % targetNodes.Length;
+            return targetNodes[targetIndex];
         }
     }
 }
