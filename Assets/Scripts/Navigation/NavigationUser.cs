@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Scarcity
@@ -44,7 +45,9 @@ namespace Scarcity
 
                 if (finalPosition == TargetNode.transform.position)
                 {
+                    TargetNode.InvokeArrived(gameObject);
                     TargetNode = TargetNode.GetNext();
+                    enabled = TargetNode;
                 }
             }
 

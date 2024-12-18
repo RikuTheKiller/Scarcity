@@ -8,10 +8,15 @@ namespace Scarcity
         public int health = 100;
         public int maxHealth = 100;
 
+        public event Action<int> Update;
+
         public void SetHealth(int amount)
         {
+            var oldHealth = health;
+
             health = Math.Clamp(amount, 0, maxHealth);
-            if (health <= 0) Destroy(gameObject);
+
+            if (health != oldHealth) Update?.Invoke(health);
         }
 
         public void TakeDamage(int amount)
