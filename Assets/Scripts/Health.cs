@@ -10,6 +10,11 @@ namespace Scarcity
 
         public event Action<int> Update;
 
+        private void Start()
+        {
+            Update?.Invoke(health);
+        }
+
         public void SetHealth(int amount)
         {
             var oldHealth = health;

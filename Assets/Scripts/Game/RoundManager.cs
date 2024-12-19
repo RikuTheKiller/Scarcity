@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Scarcity
@@ -8,7 +9,11 @@ namespace Scarcity
 
         public Health baseHealth;
 
+        public GameObject gameOverScreen;
+
         public NavigationNode[] exitNodes;
+
+        public static event Action GameOver;
 
         private void Reset()
         {
@@ -22,6 +27,8 @@ namespace Scarcity
 
         private void OnEnable()
         {
+            baseHealth.Update += OnHealthUpdate;
+
             foreach (var node in exitNodes)
             {
                 node.Arrived += OnExit;
@@ -30,6 +37,8 @@ namespace Scarcity
 
         private void OnDisable()
         {
+            baseHealth.Update -= OnHealthUpdate;
+
             foreach (var node in exitNodes)
             {
                 node.Arrived -= OnExit;
@@ -42,6 +51,17 @@ namespace Scarcity
 
             baseHealth.TakeDamage(enemy.baseDamage);
             Destroy(target);
+        }
+
+        private void OnHealthUpdate(int health)
+        {
+            if (health > 0) return;
+
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0;
+
+            GameOver?.Invoke();
+            Input.Actions.Disable();
         }
     }
 }

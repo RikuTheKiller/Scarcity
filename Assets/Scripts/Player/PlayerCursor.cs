@@ -9,12 +9,23 @@ namespace Scarcity
 
         private void OnEnable()
         {
-            Cursor.SetCursor(cursorTexture, cursorOffset, CursorMode.Auto);
+            RoundManager.GameOver += OnGameOver;
+            ApplyCursor();
         }
 
         private void OnDisable()
         {
-            Cursor.SetCursor(null, Vector3.zero, CursorMode.Auto);
+            RoundManager.GameOver -= OnGameOver;
+            RemoveCursor();
+        }
+
+        private void ApplyCursor() => Cursor.SetCursor(cursorTexture, cursorOffset, CursorMode.Auto);
+
+        private void RemoveCursor() => Cursor.SetCursor(null, Vector3.zero, CursorMode.Auto);
+
+        private void OnGameOver()
+        {
+            RemoveCursor();
         }
     }
 }
