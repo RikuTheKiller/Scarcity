@@ -7,6 +7,9 @@ namespace Scarcity
         public abstract WaveInfo this[int index] { get; }
         public abstract int Count { get; }
 
+        /// <summary>
+        /// Returns a flattened array of all of the entities this spawns.
+        /// </summary>
         public WaveInfo[] Cache()
         {
             var result = new WaveInfo[Count];
@@ -17,6 +20,14 @@ namespace Scarcity
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Returns an array of nested cache arrays. Only different from Cache() for wave types that can contain other waves, like CompositeWave.
+        /// </summary>
+        public virtual WaveInfo[][] CacheSegmented()
+        {
+            return new WaveInfo[][] { Cache() };
         }
     }
 }

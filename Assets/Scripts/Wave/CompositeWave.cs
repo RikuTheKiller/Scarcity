@@ -40,5 +40,17 @@ namespace Scarcity
                 return count;
             }
         }
+
+        public override WaveInfo[][] CacheSegmented()
+        {
+            var result = new WaveInfo[waves.Length][];
+
+            for (int i = 0; i < waves.Length; i++)
+            {
+                result[i] = waves[i].Cache();
+            }
+
+            return result;
+        }
     }
 }

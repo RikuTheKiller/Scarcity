@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,49 +8,70 @@ namespace Scarcity
     {
         public Wave wave;
 
-        public float startDelay;
-
         public NavigationNode startNode;
 
         public Quaternion startRotation;
 
-        private Coroutine waveCoroutine;
+        private WaveInfo[][] cachedWaves;
+
+        public static int waveIndex;
+        public static int maxWaveIndex;
+
+        public static event Action StartNextWaveEvent;
 
         private void Reset()
         {
             startNode = GetComponent<NavigationNode>();
         }
 
+        private void Awake()
+        {
+            cachedWaves = wave.CacheSegmented();
+            maxWaveIndex = Math.Max(maxWaveIndex, cachedWaves.Length - 1);
+        }
+
         private void OnEnable()
         {
-            waveCoroutine = StartCoroutine(WaveCoroutine());
+            StartNextWaveEvent += StartNextWaveInternal;
         }
 
         private void OnDisable()
         {
-            if (waveCoroutine == null) return;
-            StopCoroutine(waveCoroutine);
-            waveCoroutine = null;
+            StartNextWaveEvent -= StartNextWaveInternal;
+            StopAllCoroutines();
         }
 
-        private IEnumerator WaveCoroutine()
+        public static void StartNextWave()
         {
-            if (!wave) yield break;
+            if (waveIndex > maxWaveIndex) return;
+            StartNextWaveEvent?.Invoke();
 
-            yield return new WaitForSeconds(startDelay);
+            if (waveIndex >= maxWaveIndex) return;
+            waveIndex++;
+        }
 
-            WaveInfo[] waves = wave.Cache();
+        private void StartNextWaveInternal()
+        {
+            if (cachedWaves == null || waveIndex > cachedWaves.Length) return;
 
-            foreach (WaveInfo wave in waves)
+            var wave = cachedWaves[waveIndex];
+            if (wave == null) return;
+
+            StartCoroutine(WaveCoroutine(wave));
+        }
+
+        private IEnumerator WaveCoroutine(WaveInfo[] wave)
+        {
+            foreach (WaveInfo waveInfo in wave)
             {
-                GameObject instance = Instantiate(wave.Obj, transform.position, startRotation);
+                GameObject instance = Instantiate(waveInfo.Obj, transform.position, startRotation);
 
                 if (instance && instance.TryGetComponent(out NavigationUser navigationUser))
                 {
                     navigationUser.TargetNode = startNode;
                 }
 
-                yield return new WaitForSeconds(wave.Delay);
+                yield return new WaitForSeconds(waveInfo.Delay);
             }
         }
     }

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032161674905768872}
+  - component: {fileID: 6608862359837405658}
   m_Layer: 5
   m_Name: Wave Counter
   m_TagString: Untagged
@@ -38,6 +39,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 70, y: 25}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &6608862359837405658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819050696660136630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb4d5c3ed3a2f740bd009da1edb47d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 5734018413459079718}
 --- !u!1 &3152276598723406366
 GameObject:
   m_ObjectHideFlags: 0
