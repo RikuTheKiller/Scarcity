@@ -7,11 +7,11 @@ namespace Scarcity
     {
         public Wave[] waves;
 
-        public override WaveInfo this[int index]
+        public override WaveEnemyInfo this[int index]
         {
             get
             {
-                if (index < 0) return null;
+                if (index < 0) return default;
 
                 var last = 0;
 
@@ -22,7 +22,7 @@ namespace Scarcity
                     return wave[index - last + wave.Count];
                 }
 
-                return null;
+                return default;
             }
         }
 
@@ -41,9 +41,9 @@ namespace Scarcity
             }
         }
 
-        public override WaveInfo[][] CacheSegmented()
+        public override WaveCacheArray CacheSegmented()
         {
-            var result = new WaveInfo[waves.Length][];
+            var result = new WaveCacheArray(waves.Length);
 
             for (int i = 0; i < waves.Length; i++)
             {

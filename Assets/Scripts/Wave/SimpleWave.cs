@@ -9,11 +9,11 @@ namespace Scarcity
         public int count = 1;
         public float delay = 0.1f;
 
-        public override WaveInfo this[int index]
+        public override WaveEnemyInfo this[int index]
         {
             get
             {
-                if (enemies == null || enemies.Length == 0) return null;
+                if (enemies == null || enemies.Length == 0) return default;
                 return new(enemies[index % enemies.Length], delay);
             }
         }

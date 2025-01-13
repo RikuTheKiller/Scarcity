@@ -4,15 +4,15 @@ namespace Scarcity
 {
     public abstract class Wave : ScriptableObject
     {
-        public abstract WaveInfo this[int index] { get; }
+        public abstract WaveEnemyInfo this[int index] { get; }
         public abstract int Count { get; }
 
         /// <summary>
         /// Returns a flattened array of all of the entities this spawns.
         /// </summary>
-        public WaveInfo[] Cache()
+        public WaveCache Cache()
         {
-            var result = new WaveInfo[Count];
+            var result = new WaveCache(Count);
 
             for (int i = 0; i < Count; i++)
             {
@@ -25,9 +25,11 @@ namespace Scarcity
         /// <summary>
         /// Returns an array of nested cache arrays. Only different from Cache() for wave types that can contain other waves, like CompositeWave.
         /// </summary>
-        public virtual WaveInfo[][] CacheSegmented()
+        public virtual WaveCacheArray CacheSegmented()
         {
-            return new WaveInfo[][] { Cache() };
+            var result = new WaveCacheArray(1);
+            result[0] = Cache();
+            return result;
         }
     }
 }

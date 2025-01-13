@@ -12,10 +12,11 @@ namespace Scarcity
 
         public Quaternion startRotation;
 
-        private WaveInfo[][] cachedWaves;
+        private WaveCacheArray cachedWaves;
 
         public static int waveIndex;
         public static int maxWaveIndex;
+        public static int activeSpawnerCount;
 
         public static event Action StartNextWaveEvent;
 
@@ -43,6 +44,8 @@ namespace Scarcity
 
         public static void StartNextWave()
         {
+            activeSpawnerCount = 0;
+
             if (waveIndex > maxWaveIndex) return;
             StartNextWaveEvent?.Invoke();
 
@@ -52,17 +55,17 @@ namespace Scarcity
 
         private void StartNextWaveInternal()
         {
-            if (cachedWaves == null || waveIndex > cachedWaves.Length) return;
+            if (waveIndex > cachedWaves.Length) return;
 
             var wave = cachedWaves[waveIndex];
-            if (wave == null) return;
+            if (wave.Length == 0) return;
 
             StartCoroutine(WaveCoroutine(wave));
         }
 
-        private IEnumerator WaveCoroutine(WaveInfo[] wave)
+        private IEnumerator WaveCoroutine(WaveCache wave)
         {
-            foreach (WaveInfo waveInfo in wave)
+            foreach (WaveEnemyInfo waveInfo in wave)
             {
                 GameObject instance = Instantiate(waveInfo.Obj, transform.position, startRotation);
 
