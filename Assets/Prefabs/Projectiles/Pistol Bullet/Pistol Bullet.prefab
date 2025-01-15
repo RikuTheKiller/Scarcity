@@ -146,7 +146,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7952514561322427412
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 3959660264508152265}
   pool: {fileID: 11400000, guid: ee874eed6a5860b499b33f502fa6354d, type: 2}
-  speed: 10
+  speed: 20
   damage: 20
-  lifetime: 2
+  lifetime: 1
   endTime: 0

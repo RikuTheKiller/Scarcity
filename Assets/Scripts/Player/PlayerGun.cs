@@ -8,19 +8,28 @@ namespace Scarcity
         public Projectile2D projectilePrefab;
         public LayerMask targetLayers;
 
+        public float firingCooldown = 1;
+        private float nextFiringTime;
+
         private void Reset()
         {
             rigidbody = GetComponentInParent<Rigidbody2D>();
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            Input.Attack.Performed += Fire;
+            if (Input.Attack.Pressed)
+            {
+                TryFire();
+            }
         }
 
-        private void OnDisable()
+        public void TryFire()
         {
-            Input.Attack.Performed -= Fire;
+            if (nextFiringTime > Time.time) return;
+            nextFiringTime = Time.time + firingCooldown;
+
+            Fire();
         }
 
         public void Fire()

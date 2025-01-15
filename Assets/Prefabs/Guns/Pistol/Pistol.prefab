@@ -50,6 +50,7 @@ MonoBehaviour:
   targetLayers:
     serializedVersion: 2
     m_Bits: 256
+  firingCooldown: 0.4
 --- !u!212 &8042879265060692474
 SpriteRenderer:
   m_ObjectHideFlags: 0
