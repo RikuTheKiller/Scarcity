@@ -1,21 +1,26 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Scarcity
 {
-    public class StartRoundButton : MonoBehaviour
+    public class StartRoundTimer : MonoBehaviour
     {
-        public Button button;
+        public TextMeshProUGUI counter;
+
+        public float startNextRoundDelay = 30;
+        private float startNextRoundTime;
 
         private void Reset()
         {
-            button = GetComponent<Button>();
+            counter = GetComponent<TextMeshProUGUI>();
         }
 
         private void Awake()
         {
             WaveSpawner.StartNextWaveTimer += OnStartNextWaveTimer;
             WaveSpawner.StartNextWaveEvent += OnStartNextWaveEvent;
+
+            gameObject.SetActive(false);
         }
 
         private void OnDestroy()
@@ -24,19 +29,19 @@ namespace Scarcity
             WaveSpawner.StartNextWaveEvent -= OnStartNextWaveEvent;
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            button.onClick.AddListener(WaveSpawner.StartNextWave);
-        }
+            counter.text = Mathf.CeilToInt(startNextRoundTime - Time.time).ToString();
 
-        private void OnDisable()
-        {
-            button.onClick.RemoveListener(WaveSpawner.StartNextWave);
+            if (startNextRoundTime > Time.time) return;
+
+            WaveSpawner.StartNextWave();
         }
 
         private void OnStartNextWaveTimer()
         {
             gameObject.SetActive(true);
+            startNextRoundTime = Time.time + startNextRoundDelay;
         }
 
         private void OnStartNextWaveEvent()

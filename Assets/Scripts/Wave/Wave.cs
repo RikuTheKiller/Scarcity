@@ -10,7 +10,7 @@ namespace Scarcity
         /// <summary>
         /// Returns a flattened array of all of the entities this spawns.
         /// </summary>
-        public WaveCache Cache()
+        public WaveCache ToCache()
         {
             var result = new WaveCache(Count);
 
@@ -25,10 +25,10 @@ namespace Scarcity
         /// <summary>
         /// Returns an array of nested cache arrays. Only different from Cache() for wave types that can contain other waves, like CompositeWave.
         /// </summary>
-        public virtual WaveCacheArray CacheSegmented()
+        public virtual WaveCacheArray ToCacheArray()
         {
             var result = new WaveCacheArray(1);
-            result[0] = Cache();
+            result[0] = ToCache();
             return result;
         }
     }

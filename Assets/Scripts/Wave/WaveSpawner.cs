@@ -19,6 +19,7 @@ namespace Scarcity
         public static int activeSpawnerCount;
 
         public static event Action StartNextWaveEvent;
+        public static event Action StartNextWaveTimer;
 
         private void Reset()
         {
@@ -27,7 +28,7 @@ namespace Scarcity
 
         private void Awake()
         {
-            cachedWaves = wave.CacheSegmented();
+            cachedWaves = wave.ToCacheArray();
             maxWaveIndex = Math.Max(maxWaveIndex, cachedWaves.Length - 1);
         }
 
@@ -65,16 +66,30 @@ namespace Scarcity
 
         private IEnumerator WaveCoroutine(WaveCache wave)
         {
-            foreach (WaveEnemyInfo waveInfo in wave)
+            activeSpawnerCount++;
+
+            for (int i = 0; i < wave.Length; i++)
             {
-                GameObject instance = Instantiate(waveInfo.Obj, transform.position, startRotation);
+                WaveEnemyInfo enemyInfo = wave[i];
+
+                GameObject instance = Instantiate(enemyInfo.Obj, transform.position, startRotation);
 
                 if (instance && instance.TryGetComponent(out NavigationUser navigationUser))
                 {
                     navigationUser.TargetNode = startNode;
                 }
 
-                yield return new WaitForSeconds(waveInfo.Delay);
+                if (i != wave.Length - 1)
+                {
+                    yield return new WaitForSeconds(enemyInfo.Delay);
+                }
+            }
+
+            activeSpawnerCount--;
+
+            if (activeSpawnerCount == 0 && !wave.Equals(cachedWaves[^1]))
+            {
+                StartNextWaveTimer?.Invoke();
             }
         }
     }

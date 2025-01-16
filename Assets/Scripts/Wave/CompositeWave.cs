@@ -41,13 +41,13 @@ namespace Scarcity
             }
         }
 
-        public override WaveCacheArray CacheSegmented()
+        public override WaveCacheArray ToCacheArray()
         {
             var result = new WaveCacheArray(waves.Length);
 
             for (int i = 0; i < waves.Length; i++)
             {
-                result[i] = waves[i].Cache();
+                result[i] = waves[i].ToCache();
             }
 
             return result;
