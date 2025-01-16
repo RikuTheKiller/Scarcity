@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6075e38d646e6124bb6d8feadaa5bb02, type: 3}
-  m_Name: Test Composite Wave
+  m_Name: Plains Wave Setup
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: fb67c5d185efc1b4db075a0d8e0bb322, type: 2}
