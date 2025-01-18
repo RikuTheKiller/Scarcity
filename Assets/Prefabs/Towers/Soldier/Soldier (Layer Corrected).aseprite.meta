@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26a84c7ae8a009941b071c5c941ff51e
+guid: 2118625628e24be4b999f6d01d9cc8f9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -122,69 +122,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Left Hand
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 22
-      y: 19
-      width: 4
-      height: 4
-    spriteID: d52dcb89605c8cb4fac650345e104695
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 22, y: 19}
-  - name: Right Hand
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 22
-      y: 31
-      width: 4
-      height: 4
-    spriteID: a27b976d64a46ef4e90529c5203a8f1c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 22, y: 31}
-  - name: Rifle
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 37
-      width: 5
-      height: 16
-    spriteID: a06f30952a59361428fae84f3e123ccd
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 37}
   - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -196,8 +133,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 16
-      height: 7
-    spriteID: 4a6f1a3d149effa4fa8cba502614d472
+      height: 10
+    spriteID: 3c1ce995bd47f00498a3e941bce9e391
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -206,7 +143,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Head
+  - name: Rifle
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -215,10 +152,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 19
-      width: 10
-      height: 10
-    spriteID: 725d8fb74d315684cb0f5dcbca178040
+      y: 22
+      width: 5
+      height: 16
+    spriteID: b2c665d074602004aa7b4d132ea2611e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -226,47 +163,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 19}
+    uvTransform: {x: 4, y: 22}
   spriteSheetImportData: []
   asepriteLayers:
-  - layerIndex: 0
-    guid: 1254207188
-    name: Left Hand
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Left Hand
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 17
-        y: 18
-        width: 4
-        height: 4
-      spriteId: d52dcb89605c8cb4fac650345e104695
-    linkedCells: []
-    parentIndex: -1
   - layerIndex: 1
-    guid: -2080715910
-    name: Right Hand
+    guid: -1029820645
+    name: Body
     layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: Right Hand
+    - name: Body
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 17
-        y: 10
-        width: 4
-        height: 4
-      spriteId: a27b976d64a46ef4e90529c5203a8f1c
+        x: 8
+        y: 4
+        width: 16
+        height: 10
+      spriteId: 3c1ce995bd47f00498a3e941bce9e391
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 2
-    guid: 434232390
+  - layerIndex: 0
+    guid: 434232388
     name: Rifle
     layerFlags: 3
     layerType: 0
@@ -280,43 +199,7 @@ ScriptedImporter:
         y: 8
         width: 5
         height: 16
-      spriteId: a06f30952a59361428fae84f3e123ccd
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 3
-    guid: -1029820647
-    name: Body
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Body
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 8
-        y: 4
-        width: 16
-        height: 7
-      spriteId: 4a6f1a3d149effa4fa8cba502614d472
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 4
-    guid: 1403077924
-    name: Head
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: Head
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 11
-        y: 4
-        width: 10
-        height: 10
-      spriteId: 725d8fb74d315684cb0f5dcbca178040
+      spriteId: b2c665d074602004aa7b4d132ea2611e
     linkedCells: []
     parentIndex: -1
   platformSettings:

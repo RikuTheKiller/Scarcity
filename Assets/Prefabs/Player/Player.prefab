@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 1394382320299129892}
   - component: {fileID: 1445211090481044937}
   - component: {fileID: 2355332504865465447}
+  - component: {fileID: 8979962455348765505}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -453,6 +454,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 26b0667eac7c2ad4b925772cd81e4577, type: 3}
   cursorOffset: {x: 16, y: 16}
+--- !u!114 &8979962455348765505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760126323656239763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18400d86680758f4e83850929a98f530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 6769525786401522864}
 --- !u!1 &7852430696726775355
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +802,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3694150787590577568}
     m_Modifications:
     - target: {fileID: -1770603129373032197, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
+      propertyPath: pivot
+      value: 
+      objectReference: {fileID: 3694150787590577568}
+    - target: {fileID: -1770603129373032197, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 6877444996197869382}
@@ -821,3 +839,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 194644221542699953, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
   m_PrefabInstance: {fileID: 4224273112214651979}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6769525786401522864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1770603129373032197, guid: 1ac82b9e163cd7d4a8e94d8efa18fcbc, type: 3}
+  m_PrefabInstance: {fileID: 4224273112214651979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479511264892b834e897a5628d9d41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
