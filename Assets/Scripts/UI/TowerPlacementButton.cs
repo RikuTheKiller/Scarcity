@@ -10,6 +10,9 @@ namespace Scarcity
     {
         public TowerAsset towerAsset;
 
+        public SpriteRenderer towerPreviewPrefab;
+        public Image iconImage;
+
         public TextMeshProUGUI dpsValue;
         public TextMeshProUGUI rangeValue;
         public TextMeshProUGUI costValue;
@@ -32,20 +35,31 @@ namespace Scarcity
 
         public void OnPointerDown(PointerEventData data)
         {
-            var towerInstance = Instantiate(towerAsset.towerPrefab);
-            StartCoroutine(DragTower(towerInstance));
+            StartCoroutine(DragTower());
         }
 
-        private IEnumerator DragTower(Tower tower)
+        private IEnumerator DragTower()
         {
             var camera = Camera.main;
 
+            var towerPreview = Instantiate(towerPreviewPrefab);
+            towerPreview.sprite = iconImage.sprite;
+
             while (Input.Attack)
             {
-                var worldPoint = camera.ScreenToWorldPoint(Input.Point.Value);
-                tower.transform.position = new(Mathf.Round(worldPoint.x - 0.5f) + 0.5f, Mathf.Round(worldPoint.y - 0.5f) + 0.5f, 0);
+                towerPreview.transform.position = GetCursorGridPoint(camera);
                 yield return null;
             }
+
+            Destroy(towerPreview);
+
+            var tower = Instantiate(towerAsset.towerPrefab);
+            tower.transform.position = GetCursorGridPoint(camera);
+        }
+
+        private Vector3 GetCursorGridPoint(Camera camera)
+        {
+            return MainGrid.RoundToCell(camera.ScreenToWorldPoint(Input.Point.Value));
         }
     }
 }
