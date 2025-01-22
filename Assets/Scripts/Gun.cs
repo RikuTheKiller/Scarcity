@@ -27,14 +27,6 @@ namespace Scarcity
             audioSource = GetComponent<AudioSource>();
         }
 
-        private void Update()
-        {
-            if (Input.Attack.Pressed)
-            {
-                TryFire();
-            }
-        }
-
         public void TryFire()
         {
             if (nextFiringTime > Time.time) return;

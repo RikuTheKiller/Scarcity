@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856116912288209615}
   - component: {fileID: 8992417819953943184}
+  - component: {fileID: -3796436126124850877}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -167,6 +168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 7383974606715686167}
   range: 5
+--- !u!114 &-3796436126124850877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333643970548194119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59007de152bbd3f4f9ef2728869f3e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 100
 --- !u!1001 &1059192113978743641
 PrefabInstance:
   m_ObjectHideFlags: 0
