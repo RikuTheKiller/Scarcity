@@ -1,26 +1,37 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Scarcity
 {
     public class MainGrid : MonoBehaviour
     {
-        public static Grid Instance;
+        public static Grid Grid;
+        public static Tilemap Tilemap;
+
         public Grid grid;
+        public Tilemap tilemap;
 
         private void Reset()
         {
             grid = GetComponent<Grid>();
+            tilemap = GetComponent<Tilemap>();
         }
 
         private void Awake()
         {
-            Instance = grid;
+            Grid = grid;
+            Tilemap = tilemap;
         }
 
-        public static Vector3 RoundToCell(Vector3 point)
+        public static Vector3 RoundToCenter(Vector3 point)
         {
-            var offset = (Instance.cellSize + Instance.cellGap) * 0.5f;
+            var offset = (Grid.cellSize + Grid.cellGap) * 0.5f;
             return new Vector3(Mathf.Round(point.x - offset.x) + offset.x, Mathf.Round(point.y - offset.y) + offset.y, 0);
+        }
+
+        public static Vector3Int GetNearestTile(Vector3 point)
+        {
+            return Tilemap.WorldToCell(point);
         }
     }
 }

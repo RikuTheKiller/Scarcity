@@ -58,6 +58,12 @@ namespace Scarcity
         }
 
         [Flags]
+        public enum ExtraFlags
+        {
+            Occupied = 1 << 4,
+        }
+
+        [Flags]
         public enum Dir
         {
             None = 0,
