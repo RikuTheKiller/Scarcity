@@ -283,6 +283,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 6613457052374616093, guid: 2e2c551120d309c46b239a8de9373652, type: 3}
   assets:
   - {fileID: 11400000, guid: 94088c2a8a561234a9ba754eba745759, type: 2}
+  - {fileID: 11400000, guid: d2a47e5948e973843ae7823a8bc02823, type: 2}
 --- !u!1 &7261597195954767799
 GameObject:
   m_ObjectHideFlags: 0

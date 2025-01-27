@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 970371540710952160}
   - component: {fileID: 6041176061349759012}
   - component: {fileID: 6625153588768694331}
+  - component: {fileID: -8241279679195502589}
   m_Layer: 0
   m_Name: Flame
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e44050aa07d5834184f438468427af9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.45844054, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -147,7 +148,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -166,8 +167,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 970371540710952160}
-  pool: {fileID: 0}
-  speed: 5
+  pool: {fileID: 11400000, guid: 578ba42cff6c4ea408342a19aa11ce2f, type: 2}
+  speed: 3
   damage: 5
   lifetime: 2
   endTime: 0
+--- !u!114 &-8241279679195502589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754646112226335393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2949ca06b1328c148a887a456b0e5cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 5
+  scaleSpeed: 5

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7730315628852601601}
+  - component: {fileID: -4748551544307104081}
+  - component: {fileID: 5055670417767730914}
   m_Layer: 0
   m_Name: War Crime
   m_TagString: Untagged
@@ -33,6 +35,33 @@ Transform:
   - {fileID: 1618757478474609491}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4748551544307104081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153536519896073122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59007de152bbd3f4f9ef2728869f3e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 150
+--- !u!114 &5055670417767730914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153536519896073122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4858eb6e8d5eec84b8d45f4f65ff1b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 5335043017200082672}
+  range: 3
 --- !u!1 &2797600894345089076
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,14 +252,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1618757478474609491}
   rigidbody: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 6625153588768694331, guid: 5acc2be17d46b2d4eabd8d47c0e4ab7d, type: 3}
   targetLayers:
     serializedVersion: 2
     m_Bits: 256
   audioSource: {fileID: 3120266061864800001}
   firingSound: {fileID: 0}
   firingSoundVolume: 1
-  firingCooldown: 0.1
+  firingCooldown: 0.05
 --- !u!82 &3120266061864800001
 AudioSource:
   m_ObjectHideFlags: 0
