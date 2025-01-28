@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Scarcity
@@ -13,10 +14,12 @@ namespace Scarcity
         public int damage = 0;
         public float lifetime = 10;
 
+        public bool piercing = false;
+
         public LayerMask LayerMask { get => rigidbody.includeLayers; set => rigidbody.includeLayers = value; }
 
-        [HideInInspector]
-        public float endTime = 0;
+        private float endTime = 0;
+        private List<Rigidbody2D> piercedTargets = new();
 
         private void Reset()
         {
@@ -38,6 +41,7 @@ namespace Scarcity
         {
             rigidbody.linearVelocity = transform.up * speed;
             endTime = Time.time + lifetime;
+            piercedTargets.Clear();
         }
 
         public void Fire(Vector2 position, Vector2 direction)
@@ -59,12 +63,18 @@ namespace Scarcity
 
         public void Hit(Collider2D collider)
         {
+            if (piercing && piercedTargets.Contains(collider.attachedRigidbody))
+                return;
+
             if (collider.attachedRigidbody && collider.attachedRigidbody.TryGetComponent(out Health health))
             {
                 health.TakeDamage(damage);
             }
 
-            pool.Release(this);
+            if (!piercing)
+            {
+                pool.Release(this);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collider)
