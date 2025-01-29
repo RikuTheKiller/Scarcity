@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Scarcity
@@ -27,8 +28,14 @@ namespace Scarcity
 
         private void OnEnable()
         {
+            projectile.OnHit += OnHit;
             spawnTime = Time.time;
             UpdateState();
+        }
+
+        private void OnDisable()
+        {
+            projectile.OnHit -= OnHit;
         }
 
         private void Update()
@@ -42,6 +49,11 @@ namespace Scarcity
             spriteRenderer.color = gradient.Evaluate(timeSinceSpawn / projectile.lifetime);
             transform.rotation = Quaternion.Euler(0, 0, timeSinceSpawn * rotationSpeed * 360);
             transform.localScale = startingScale * (1 + timeSinceSpawn * scaleSpeed);
+        }
+
+        private void OnHit(Collider2D collider)
+        {
+            collider.attachedRigidbody.GetOrAddComponent<FireStatusEffect>().ResetTime();
         }
     }
 }

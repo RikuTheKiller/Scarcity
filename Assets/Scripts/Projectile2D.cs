@@ -21,6 +21,8 @@ namespace Scarcity
         private float endTime = 0;
         private List<Rigidbody2D> piercedTargets = new();
 
+        public event Action<Collider2D> OnHit;
+
         private void Reset()
         {
             rigidbody = GetComponent<Rigidbody2D>();
@@ -70,6 +72,8 @@ namespace Scarcity
             {
                 health.TakeDamage(damage);
             }
+
+            OnHit?.Invoke(collider);
 
             if (!piercing)
             {
