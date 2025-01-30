@@ -9,12 +9,14 @@ namespace Scarcity
         public static List<Enemy> All = new();
 
         public Health health;
+        public NavigationUser navigationUser;
 
         public int baseDamage = 10;
 
         private void Reset()
         {
             health = GetComponent<Health>();
+            navigationUser = GetComponent<NavigationUser>();
         }
 
         private void OnEnable()

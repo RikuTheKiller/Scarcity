@@ -25,10 +25,17 @@ namespace Scarcity
 
             if (target)
             {
-                transform.rotation = Quaternion.LookRotation(Vector3.forward, target.transform.position - transform.position);
-                gun.pivot.rotation = Quaternion.LookRotation(Vector3.forward, target.transform.position - gun.pivot.position);
+                var predictedPosition = PredictTarget(target);
+                transform.rotation = Quaternion.LookRotation(Vector3.forward, predictedPosition - transform.position);
+                gun.pivot.rotation = Quaternion.LookRotation(Vector3.forward, predictedPosition - gun.pivot.position);
                 gun.TryFire();
             }
+        }
+
+        private Vector3 PredictTarget(Enemy target)
+        {
+            var distance = Vector3.Distance(target.transform.position, transform.position);
+            return target.transform.position + target.navigationUser.speed * (distance / gun.projectilePrefab.speed) * target.transform.up;
         }
     }
 }

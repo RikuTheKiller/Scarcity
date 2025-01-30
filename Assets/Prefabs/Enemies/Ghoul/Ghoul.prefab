@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 120042836666268600}
+  navigationUser: {fileID: 4271926142160373346}
   baseDamage: 10
 --- !u!1 &6833235995581725561 stripped
 GameObject:

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59007de152bbd3f4f9ef2728869f3e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 64cf2b5d95d72a646b48ceb3a79c9560, type: 3}
   cost: 150
 --- !u!114 &5055670417767730914
 MonoBehaviour:

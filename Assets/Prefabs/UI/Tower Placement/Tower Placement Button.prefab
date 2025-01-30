@@ -1074,6 +1074,7 @@ MonoBehaviour:
   dpsValue: {fileID: 5168082555368448413}
   rangeValue: {fileID: 5310266929318472049}
   costValue: {fileID: 7206755346373447089}
+  nameValue: {fileID: 6248731966546876342}
 --- !u!1 &7601085292336425474
 GameObject:
   m_ObjectHideFlags: 0

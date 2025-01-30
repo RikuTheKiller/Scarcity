@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59007de152bbd3f4f9ef2728869f3e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 4d49ac2761ae7be46bc9ec9cb93fc273, type: 3}
   cost: 100
 --- !u!1001 &1059192113978743641
 PrefabInstance:

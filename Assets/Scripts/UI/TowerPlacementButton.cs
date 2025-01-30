@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,12 +17,24 @@ namespace Scarcity
         public TextMeshProUGUI dpsValue;
         public TextMeshProUGUI rangeValue;
         public TextMeshProUGUI costValue;
+        public TextMeshProUGUI nameValue;
 
         private bool dragging = false;
 
         private void Start()
         {
             SetTowerAsset(towerAsset);
+            UpdateCostDisplay(Money.Get(), 0);
+        }
+
+        private void OnEnable()
+        {
+            Money.Changed += UpdateCostDisplay;
+        }
+
+        private void OnDisable()
+        {
+            Money.Changed -= UpdateCostDisplay;
         }
 
         public void SetTowerAsset(TowerAsset towerAsset)
@@ -35,19 +46,21 @@ namespace Scarcity
             dpsValue.text = towerAsset.GetDPS().ToString();
             rangeValue.text = towerAsset.GetRange().ToString();
             costValue.text = "$" + towerAsset.GetCost().ToString();
+            iconImage.sprite = towerAsset.GetIcon();
+            nameValue.text = towerAsset.name;
         }
 
         public void OnPointerDown(PointerEventData data)
         {
-            dragging = true;
-            StartCoroutine(DragTower());
-            Input.Attack.Action.Disable();
+            if (Money.Buy(towerAsset.GetCost()))
+            {
+                StartCoroutine(DragTower());
+            }
         }
 
         public void OnPointerUp(PointerEventData data)
         {
             dragging = false;
-            Input.Attack.Action.Enable();
         }
 
         private IEnumerator DragTower()
@@ -60,6 +73,9 @@ namespace Scarcity
             Vector2 point;
             Vector3Int tilePosition;
 
+            dragging = true;
+            Input.Attack.Action.Disable();
+
             while (dragging)
             {
                 point = GetCursorPoint(camera);
@@ -71,6 +87,8 @@ namespace Scarcity
 
                 yield return null;
             }
+
+            Input.Attack.Action.Enable();
 
             Destroy(towerPreview);
 
@@ -109,6 +127,11 @@ namespace Scarcity
         private void UpdatePreview(SpriteRenderer preview, bool valid)
         {
             preview.color = valid ? new(0, 1, 0, 0.6f) : new(1, 0, 0, 0.6f);
+        }
+
+        private void UpdateCostDisplay(float money, float oldMoney)
+        {
+            costValue.color = money < towerAsset.GetCost() ? Color.red : Color.green;
         }
     }
 }

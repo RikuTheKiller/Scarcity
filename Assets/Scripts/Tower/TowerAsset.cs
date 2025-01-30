@@ -22,9 +22,7 @@ namespace Scarcity
             return towerGun ? towerGun.range : 0;
         }
 
-        public float GetCost()
-        {
-            return towerPrefab.cost;
-        }
+        public float GetCost() => towerPrefab.cost;
+        public Sprite GetIcon() => towerPrefab.icon;
     }
 }
