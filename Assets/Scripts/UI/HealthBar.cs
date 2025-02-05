@@ -5,7 +5,8 @@ namespace Scarcity
 {
     public class HealthBar : MonoBehaviour
     {
-        public Health trackedHealth;
+        [SerializeField]
+        private Health trackedHealth;
         public Transform fill;
 
         private void OnEnable()
@@ -18,6 +19,23 @@ namespace Scarcity
         {
             if (!fill || !trackedHealth) return;
             trackedHealth.Update -= OnHealthUpdate;
+        }
+
+        public void SetTrackedHealth(Health health)
+        {
+            if (!gameObject.activeInHierarchy)
+            {
+                trackedHealth = health;
+                return;
+            }
+
+            if (trackedHealth)
+            {
+                trackedHealth.Update -= OnHealthUpdate;
+            }
+
+            trackedHealth = health;
+            trackedHealth.Update += OnHealthUpdate;
         }
 
         private void OnHealthUpdate(int health)

@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7952514561322427412, guid: d4fd4a5e5d11b7c49a4852d719d05410, type: 3}
+      propertyPath: pool
+      value: 
+      objectReference: {fileID: 11400000, guid: f3678ffc437ab5a429a751e3552fa97a, type: 2}
+    - target: {fileID: 7952514561322427412, guid: d4fd4a5e5d11b7c49a4852d719d05410, type: 3}
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}

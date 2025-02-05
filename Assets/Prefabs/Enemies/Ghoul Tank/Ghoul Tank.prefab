@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1578417786321657233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1419523225740270056}
+    m_Modifications:
+    - target: {fileID: 8877444499460679709, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877444499460679709, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877444499460679709, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915067677914637895, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+      propertyPath: m_Name
+      value: Health Bar Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+--- !u!4 &7986199499939067276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8877444499460679709, guid: 09e50a8e6f66c9147aff492cd74ea4eb, type: 3}
+  m_PrefabInstance: {fileID: 1578417786321657233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9144186333555730149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8,11 +42,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6792127586102869157, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5992517924554165049, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
       propertyPath: m_Name
       value: Ghoul Tank
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -541931063482323975, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
@@ -58,7 +104,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7986199499939067276}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
       insertIndex: -1
@@ -120,6 +169,11 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.15625
+--- !u!4 &1419523225740270056 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
+  m_PrefabInstance: {fileID: 9144186333555730149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2188417734733066637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: dd80319649ab63741924d13f34cb79c1, type: 3}
@@ -164,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7783eb9442fc0694596ea182f04355ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  maxHealth: 300
+  health: 250
+  maxHealth: 250
 --- !u!114 &5935670723769416675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1396625366090080197}
+  navigationUser: {fileID: 5935670723769416675}
   baseDamage: 30
+  killReward: 10
 --- !u!1 &5922481687150432802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5992517924554165049, guid: dd80319649ab63741924d13f34cb79c1, type: 3}

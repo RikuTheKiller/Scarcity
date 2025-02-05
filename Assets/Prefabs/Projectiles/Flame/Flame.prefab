@@ -169,7 +169,7 @@ MonoBehaviour:
   rigidbody: {fileID: 970371540710952160}
   pool: {fileID: 11400000, guid: 578ba42cff6c4ea408342a19aa11ce2f, type: 2}
   speed: 5
-  damage: 2
+  damage: 1
   lifetime: 0.5
   piercing: 1
 --- !u!114 &-8241279679195502589

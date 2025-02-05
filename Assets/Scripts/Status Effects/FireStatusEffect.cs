@@ -12,7 +12,7 @@ namespace Scarcity
 
         private void OnEnable()
         {
-            endTime = Time.time + 8f;
+            ResetTime();
             StartCoroutine(DamageRoutine());
         }
 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185e4126fb96cd14bad841742088d613, type: 3}
+  m_Name: 5 Runners 5 Tanks
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 7260506696823855235, guid: 8cddfc5a89bc03a45a6a1c21f7c85b1c, type: 3}
+  - {fileID: 2188417734733066637, guid: 7fe3527a5de1f15469ad9b10207be4d0, type: 3}
+  count: 5
+  delay: 0.5

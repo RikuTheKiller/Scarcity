@@ -12,6 +12,7 @@ namespace Scarcity
         public NavigationUser navigationUser;
 
         public int baseDamage = 10;
+        public int killReward = 10;
 
         private void Reset()
         {
@@ -35,7 +36,10 @@ namespace Scarcity
 
         private void OnHealthUpdate(int health)
         {
-            if (health <= 0) Destroy(gameObject);
+            if (health > 0) return;
+
+            Destroy(gameObject);
+            Money.Adjust(killReward);
         }
     }
 }

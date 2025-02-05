@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6075e38d646e6124bb6d8feadaa5bb02, type: 3}
-  m_Name: Wave Top 1
+  m_Name: Plains Bottom
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 995b12f8f4fe8ea4e96d7c8574d838e3, type: 2}
+  - {fileID: 11400000, guid: d4f358c03306ded4eb308eac061f2dba, type: 2}
+  - {fileID: 11400000, guid: 8471a729620226b43a617d49d93c09f6, type: 2}
+  - {fileID: 11400000, guid: 53e47ac9db8da6248869c9de9fdd4ed1, type: 2}
+  - {fileID: 11400000, guid: ff09fed536f7c724cad6cec13871afaf, type: 2}
+  - {fileID: 11400000, guid: 2cc3b574cf8e5b947b5e6d2dc3dfaa06, type: 2}

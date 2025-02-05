@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6075e38d646e6124bb6d8feadaa5bb02, type: 3}
-  m_Name: Wave Top 1
+  m_Script: {fileID: 11500000, guid: 185e4126fb96cd14bad841742088d613, type: 3}
+  m_Name: 5 Ghouls
   m_EditorClassIdentifier: 
-  waves:
-  - {fileID: 11400000, guid: 995b12f8f4fe8ea4e96d7c8574d838e3, type: 2}
+  enemies:
+  - {fileID: 5050316591943813096, guid: 587d579a09e91464595f8f648f3ff107, type: 3}
+  count: 10
+  delay: 0.5
