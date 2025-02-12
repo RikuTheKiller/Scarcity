@@ -15,6 +15,8 @@ namespace Scarcity
         private float spawnTime = 0;
         private Vector3 startingScale = Vector3.one;
 
+        private LayerMask enemyLayer;
+
         private void Reset()
         {
             projectile = GetComponent<Projectile2D>();
@@ -23,6 +25,7 @@ namespace Scarcity
 
         private void Awake()
         {
+            enemyLayer = LayerMask.NameToLayer("Enemy");
             startingScale = transform.localScale;
         }
 
@@ -53,7 +56,10 @@ namespace Scarcity
 
         private void OnHit(Collider2D collider)
         {
-            collider.attachedRigidbody.GetOrAddComponent<FireStatusEffect>().ResetTime();
+            if (collider.attachedRigidbody.gameObject.layer == enemyLayer)
+            {
+                collider.attachedRigidbody.GetOrAddComponent<FireStatusEffect>().ResetTime();
+            }
         }
     }
 }

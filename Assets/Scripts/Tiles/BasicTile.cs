@@ -13,6 +13,8 @@ namespace Scarcity
 
         public Tile.ColliderType colliderType = Tile.ColliderType.Grid;
 
+        public CustomTileFlags tileFlags;
+
         public override void RefreshTile(Vector3Int position, ITilemap tilemap)
         {
             foreach (var offset in AllOffsets)
@@ -36,6 +38,8 @@ namespace Scarcity
             if (Application.isPlaying && !IsVisible(position, tilemap, ref tileData)) return;
 
             GetVisualTileData(position, tilemap, ref tileData);
+
+            tileData.flags |= (TileFlags)tileFlags;
         }
 
         public virtual void GetVisualTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
@@ -57,9 +61,13 @@ namespace Scarcity
             return false;
         }
 
-        [Flags]
-        public enum ExtraFlags
+        [Serializable, Flags]
+        public enum CustomTileFlags
         {
+            LockColor = TileFlags.LockColor,
+            LockTransform = TileFlags.LockTransform,
+            InstantiateGameObjectRuntimeOnly = TileFlags.InstantiateGameObjectRuntimeOnly,
+            KeepGameObjectRuntimeOnly = TileFlags.KeepGameObjectRuntimeOnly,
             Occupied = 1 << 4,
         }
 

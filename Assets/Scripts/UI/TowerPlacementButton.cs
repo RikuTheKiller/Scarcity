@@ -101,7 +101,7 @@ namespace Scarcity
             tower.transform.position = MainGrid.RoundToCenter(point);
 
             var tileFlags = MainGrid.Tilemap.GetTileFlags(tilePosition);
-            MainGrid.Tilemap.SetTileFlags(tilePosition, tileFlags | (TileFlags)BasicTile.ExtraFlags.Occupied);
+            MainGrid.Tilemap.SetTileFlags(tilePosition, tileFlags | (TileFlags)BasicTile.CustomTileFlags.Occupied);
         }
 
         private Vector2 GetCursorPoint(Camera camera)
@@ -118,7 +118,7 @@ namespace Scarcity
                 return false;
             if (basicTile.colliderType != Tile.ColliderType.None)
                 return false;
-            if ((tileFlags & (TileFlags)BasicTile.ExtraFlags.Occupied) != 0)
+            if ((tileFlags & (TileFlags)BasicTile.CustomTileFlags.Occupied) != 0)
                 return false;
 
             return true;

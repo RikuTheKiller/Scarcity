@@ -10,16 +10,28 @@ namespace Scarcity
         private float endTime = 0;
         private float duration = 8;
 
+        private ParticleSystem particles;
+
         private void OnEnable()
         {
+            particles = Instantiate(ParticleEffectReferences.Fire, transform);
+
             ResetTime();
             StartCoroutine(DamageRoutine());
         }
 
         private void OnDisable()
         {
+            Destroy(particles.gameObject);
+            particles = null;
+
             StopAllCoroutines();
             Destroy(this);
+        }
+
+        private void Update()
+        {
+            particles.transform.rotation = Quaternion.identity; // Thought you had seen shitcode yet? Think again.
         }
 
         public void ResetTime()

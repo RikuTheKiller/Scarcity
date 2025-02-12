@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,7 @@ namespace Scarcity
     public class Enemy : MonoBehaviour
     {
         public static List<Enemy> All = new();
+        public static Action<int> EnemyCountChanged;
 
         public Health health;
         public NavigationUser navigationUser;
@@ -25,6 +26,7 @@ namespace Scarcity
             if (!health) return;
             health.Update += OnHealthUpdate;
             All.Add(this);
+            EnemyCountChanged?.Invoke(All.Count);
         }
 
         private void OnDisable()
@@ -32,6 +34,7 @@ namespace Scarcity
             if (!health) return;
             health.Update -= OnHealthUpdate;
             All.Remove(this);
+            EnemyCountChanged?.Invoke(All.Count);
         }
 
         private void OnHealthUpdate(int health)

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: 0
   colliderType: 0
+  tileFlags: 16
   sprites:
   - {fileID: -186464782, guid: d1dc648074c1d8d4b986c49bc02b926c, type: 3}
   - {fileID: -815075598, guid: d1dc648074c1d8d4b986c49bc02b926c, type: 3}

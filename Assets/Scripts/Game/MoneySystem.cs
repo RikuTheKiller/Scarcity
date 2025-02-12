@@ -5,7 +5,7 @@ namespace Scarcity
 {
     public class Money
     {
-        private static float money = 100;
+        private static float money = 120;
 
         /// <summary>
         /// Sent when the amount of money changes. (money, oldMoney)
