@@ -17,6 +17,7 @@ namespace Scarcity
         public static int waveIndex;
         public static int maxWaveIndex;
         public static int activeSpawnerCount;
+        public static bool lastWaveOver;
 
         public static event Action StartNextWaveEvent;
         public static event Action StartNextWaveTimer;
@@ -91,6 +92,8 @@ namespace Scarcity
             {
                 StartNextWaveTimer?.Invoke();
             }
+
+            lastWaveOver = wave.Equals(cachedWaves[^1]) && activeSpawnerCount == 0;
         }
     }
 }

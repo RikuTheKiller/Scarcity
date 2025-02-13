@@ -43,6 +43,12 @@ namespace Scarcity
 
             Destroy(gameObject);
             Money.Adjust(killReward);
+
+            if (All.Count == 0 && WaveSpawner.lastWaveOver)
+            {
+                StuffRefs.Instance.GameOver.SetActive(true);
+                Input.Actions.Disable();
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Scarcity
 
         public void OnPointerDown(PointerEventData data)
         {
-            if (Money.Buy(towerAsset.GetCost()))
+            if (Money.Get() >= towerAsset.GetCost())
             {
                 StartCoroutine(DragTower());
             }
@@ -90,12 +90,14 @@ namespace Scarcity
 
             Input.Attack.Action.Enable();
 
-            Destroy(towerPreview);
+            Destroy(towerPreview.gameObject);
 
             point = GetCursorPoint(camera);
             tilePosition = MainGrid.GetNearestTile(point);
 
             if (!IsValidPosition(tilePosition)) yield break;
+
+            if (!Money.Buy(towerAsset.GetCost())) yield break;
 
             var tower = Instantiate(towerAsset.towerPrefab);
             tower.transform.position = MainGrid.RoundToCenter(point);
