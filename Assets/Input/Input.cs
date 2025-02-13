@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +9,7 @@ namespace Scarcity
 {
     public class Input : MonoBehaviour
     {
-        public static readonly InputActions Actions = InitActions();
+        public static InputActions Actions;
 
         private static InputActions InitActions()
         {
@@ -17,13 +18,31 @@ namespace Scarcity
             return actions;
         }
 
+        private void Awake()
+        {
+            Actions = InitActions();
+
+            Move = Actions.Player.Move;
+            Attack = Actions.Player.Attack;
+
+            Point = Actions.UI.Point;
+            Cancel = Actions.UI.Cancel;
+            Enter = Actions.UI.Enter;
+        }
+
+        private void OnDestroy()
+        {
+            Actions.Disable();
+        }
+
         // Player Actions
-        public static readonly InputValue<Vector2> Move = Actions.Player.Move;
-        public static readonly InputButton Attack = Actions.Player.Attack;
+        public static InputValue<Vector2> Move;
+        public static InputButton Attack;
 
         // UI Actions
-        public static readonly InputValue<Vector2> Point = Actions.UI.Point;
-        public static readonly InputButton Cancel = Actions.UI.Cancel;
+        public static InputValue<Vector2> Point;
+        public static InputButton Cancel;
+        public static InputButton Enter;
     }
 
     public class InputValue<T> where T : struct
